@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science Unplugged</title>
+    <link>http://www.dsup.org/categories/</link>
+    <description>Recent content on Data Science Unplugged</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Fri, 26 Jan 2018 15:49:20 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.dsup.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Events</title>
+      <link>http://www.dsup.org/2018/01/26/events/</link>
+      <pubDate>Fri, 26 Jan 2018 15:49:20 +0200</pubDate>
+      
+      <guid>http://www.dsup.org/2018/01/26/events/</guid>
+      <description>Data Science in Practice @FCUL This time DSup brings you a full-day event! An informal and relaxed event, sharing stories from different speakers, to help students in the transition from academia into their professional life.
+Find more about this project on our webpage and save your spot for this amazing joint meetup!</description>
+    </item>
+    
+  </channel>
+</rss>

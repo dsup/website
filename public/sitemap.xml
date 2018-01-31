@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://www.dsup.org/2018/01/26/resources/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/2018/01/26/events/</loc>
+    <lastmod>2018-01-26T15:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/about/</loc>
+    <lastmod>2017-05-19T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/categories/</loc>
+    <lastmod>2018-01-26T15:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/books/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/categories/</loc>
+    <lastmod>2018-01-26T15:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/data-science/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/events/</loc>
+    <lastmod>2018-01-26T15:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/learning/</loc>
+    <lastmod>2018-01-26T15:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/post/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/python/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/r-programming/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/statistics/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dsup.org/tags/</loc>
+    <lastmod>2018-01-26T16:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

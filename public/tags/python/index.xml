@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Data Science Unplugged</title>
+    <link>http://www.dsup.org/tags/python/</link>
+    <description>Recent content in Python on Data Science Unplugged</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Fri, 26 Jan 2018 16:49:20 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.dsup.org/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Resources</title>
+      <link>http://www.dsup.org/2018/01/26/resources/</link>
+      <pubDate>Fri, 26 Jan 2018 16:49:20 +0200</pubDate>
+      
+      <guid>http://www.dsup.org/2018/01/26/resources/</guid>
+      <description>Data Science Thinking
+ https://medium.com/@d_spiegel [Articles]  R programming
+ http://r4ds.had.co.nz/ [Free online Book]  Python programming
+ https://jakevdp.github.io/PythonDataScienceHandbook/ [Free online Book]  Other
+ https://www.datascienceatthecommandline.com/ [Free online Book]  </description>
+    </item>
+    
+  </channel>
+</rss>
