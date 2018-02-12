@@ -2,7 +2,7 @@
 title = "Events"
 date = "2018-01-26T15:49:20+02:00"
 tags = ["events", "data science", "learning"]
-categories = [""]
+#categories = [""]
 menu = "main"
 banner = "banners/dsup_eventFeb2018.png"
 +++
