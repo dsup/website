@@ -62,10 +62,10 @@ theme = "hugo-icarus-theme"
    # label  = "Resources"
    # link   = "/"
 
-[[params.menu]]
-    before = false
-    label  = "Blog"
-    link   = "/"
+#[[params.menu]]
+ #   before = false
+ #   label  = "Blog"
+  #  link   = "/"
 
 
 # Enter a link for the follow button on the left

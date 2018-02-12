@@ -2,10 +2,10 @@
 title = "Blog"
 date = "2018-02-08T09:52:20+02:00"
 tags = ["data science", "Statistics", "Accessibility", "learning", "teaching"]
-#categories = ["Blog"]
+#categories = [""]
 menu = "main"
 nodateline = true
-#banner = "banners/resources.jpeg"
+banner = "banners/world_access.jpeg"
 +++
 
 # Data Science Education: Some Thoughts
