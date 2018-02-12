@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teaching on Data Science Unplugged</title>
-    <link>http://www.dsup.org/tags/teaching/</link>
+    <link>/tags/teaching/</link>
     <description>Recent content in Teaching on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Thu, 08 Feb 2018 09:52:20 +0200</lastBuildDate>
     
-	<atom:link href="http://www.dsup.org/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>http://www.dsup.org/2018/02/08/blog/</link>
+      <link>/2018/02/08/blog/</link>
       <pubDate>Thu, 08 Feb 2018 09:52:20 +0200</pubDate>
       
-      <guid>http://www.dsup.org/2018/02/08/blog/</guid>
+      <guid>/2018/02/08/blog/</guid>
       <description>Data Science Education: Some Thoughts Saghir Bashir (@ilustat) 7 Feb 2018
 Life scientists, economists, ecologists, computer scientists, social scientists, linguists, mathematicians, physcists and many others have or are choosing data science as a career. The treasure trove of backgrounds presents knowledge sharing opportunities and challenges alike. However for newcomers this career transition and continuous development can be overwhelming and leave some of them with feelings of not belonging or lacking competence, characteristics of impostor’s syndrome.</description>
     </item>
