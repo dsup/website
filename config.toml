@@ -77,7 +77,7 @@ footnotereturnlinkcontents = "↩"
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
 # created automatically.
-    github          = "ilustat"
+    github          = "dsup"
     meetup          = "https://www.meetup.com/Data-Science-Unplugged"
     #bitbucket       = ""
     #jsfiddle        = ""
