@@ -1,14 +1,16 @@
-+++
-title = "Blog"
-date = "2018-02-08T09:52:20+02:00"
-tags = ["data science", "Statistics", "Accessibility", "learning", "teaching"]
-#categories = [""]
-menu = "main"
-nodateline = true
-banner = "banners/world_access.jpeg"
-+++
+---
+title: 'Blog'
+author: Saghir Bashir
+date: '2018-02-14'
+slug: data-science-education-some-thoughts
+#categories: ["Blog"]
+menu: "main"
+tags: ["data science", "Statistics", "Accessibility", "learning", "teaching"]
+banner: "banners/world_access.jpeg"
+---
 
 # Data Science Education: Some Thoughts
+
 
 *Saghir Bashir (@ilustat)*
 *7 Feb 2018*
