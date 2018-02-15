@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Wed, 14 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.dsup.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,25 +15,16 @@
     <item>
       <title>Accessibility</title>
       <link>http://www.dsup.org/tags/accessibility/</link>
-      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/tags/accessibility/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Books</title>
-      <link>http://www.dsup.org/tags/books/</link>
-      <pubDate>Fri, 26 Jan 2018 16:49:20 +0200</pubDate>
-      
-      <guid>http://www.dsup.org/tags/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data Science</title>
       <link>http://www.dsup.org/tags/data-science/</link>
-      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/tags/data-science/</guid>
       <description></description>
@@ -42,7 +33,7 @@
     <item>
       <title>Events</title>
       <link>http://www.dsup.org/tags/events/</link>
-      <pubDate>Fri, 26 Jan 2018 15:49:20 +0200</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/tags/events/</guid>
       <description></description>
@@ -51,34 +42,16 @@
     <item>
       <title>Learning</title>
       <link>http://www.dsup.org/tags/learning/</link>
-      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>http://www.dsup.org/tags/python/</link>
-      <pubDate>Fri, 26 Jan 2018 16:49:20 +0200</pubDate>
-      
-      <guid>http://www.dsup.org/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Programming</title>
-      <link>http://www.dsup.org/tags/r-programming/</link>
-      <pubDate>Fri, 26 Jan 2018 16:49:20 +0200</pubDate>
-      
-      <guid>http://www.dsup.org/tags/r-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Statistics</title>
       <link>http://www.dsup.org/tags/statistics/</link>
-      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/tags/statistics/</guid>
       <description></description>
@@ -87,7 +60,7 @@
     <item>
       <title>Teaching</title>
       <link>http://www.dsup.org/tags/teaching/</link>
-      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/tags/teaching/</guid>
       <description></description>

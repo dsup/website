@@ -2,27 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Programming on Data Science Unplugged</title>
-    <link>http://www.dsup.org/tags/r-programming/</link>
+    <link>/tags/r-programming/</link>
     <description>Recent content in R Programming on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Fri, 26 Jan 2018 16:49:20 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.dsup.org/tags/r-programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/r-programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Resources</title>
-      <link>http://www.dsup.org/2018/01/26/resources/</link>
-      <pubDate>Fri, 26 Jan 2018 16:49:20 +0200</pubDate>
+      <title>Blog2</title>
+      <link>/2018/02/14/blog2/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.dsup.org/2018/01/26/resources/</guid>
-      <description>Data Science Thinking
- https://medium.com/@d_spiegel [Articles]  R programming
- http://r4ds.had.co.nz/ [Free online Book]  Python programming
- https://jakevdp.github.io/PythonDataScienceHandbook/ [Free online Book]  Other
- https://www.datascienceatthecommandline.com/ [Free online Book]  </description>
+      <guid>/2018/02/14/blog2/</guid>
+      <description>Testing</description>
     </item>
     
   </channel>

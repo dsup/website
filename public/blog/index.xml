@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Data Science Unplugged</title>
-    <link>http://www.dsup.org/categories/blog/</link>
-    <description>Recent content in Blog on Data Science Unplugged</description>
+    <title>Blogs on Data Science Unplugged</title>
+    <link>http://www.dsup.org/blog/</link>
+    <description>Recent content in Blogs on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Thu, 15 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.dsup.org/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dsup.org/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

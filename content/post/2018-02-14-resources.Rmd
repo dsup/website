@@ -1,12 +1,14 @@
-+++
-title = "Resources"
-date = "2018-01-26T16:49:20+02:00"
-tags = ["R programming", "data science", "Python", "Statistics", "Books"]
-#categories = [""]
-menu = "main"
-nodateline = true
-banner = "banners/resources.jpeg"
-+++
+---
+title: Resources
+author: ~
+date: '2018-02-14'
+slug: resources
+categories: []
+tags: []
+menu: "main"
+banner: "banners/resources.jpeg"
+nodateline: true
+---
 
 **Data Science Thinking**
 

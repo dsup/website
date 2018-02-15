@@ -30,6 +30,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     gravatar = "lisboa@dsup.org"
     logo = "css/images/logo.png"
     disable_mathjax = false # set to true to disable MathJax
+    
 
     # define which types of pages should be shown. By default the type with the most regular pages
     mainSections = ["post"]
@@ -57,15 +58,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
    # label  = "Events"
     #link   = "/"
     
-#[[params.menu]]
- #   before = false
-   # label  = "Resources"
-   # link   = "/"
+[[params.menu]]
+    before = false
+    label  = "Events"
+    link   = "events/data-science-in-practice-fcul-rmd"
 
-#[[params.menu]]
- #   before = false
- #   label  = "Blog"
-  #  link   = "/"
+[[params.menu]]
+    before = false
+    label  = "Blog"
+    link   = "blog/data-science-education-some-thoughts"
 
 
 # Enter a link for the follow button on the left
@@ -108,7 +109,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
-    recent_articles = true
+    recent_articles = false
     categories = true
     tags = true
     tag_cloud = true
+    
