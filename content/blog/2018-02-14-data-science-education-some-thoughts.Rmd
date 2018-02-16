@@ -5,7 +5,7 @@ date: '2018-02-15'
 slug: data-science-education-some-thoughts
 categories: ["Blog"]
 #menu: "main"
-tags: ["data science", "Statistics", "Accessibility", "learning", "teaching"]
+tags: ["data science", "Statistics", "Accessibility", "learning", "teaching", "R"]
 banner: "banners/world_access.jpeg"
 ---
 

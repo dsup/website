@@ -27,13 +27,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     avatar = "css/images/logo.png"
     # Enter your email address to display your Gravatar icon in the profile. If not set the theme
     # will fallback to the avatar.
-    #buigravatar = "lisboa@dsup.org"
-    #logo = "css/images/avatar.png"
+    #gravatar = "lisboa@dsup.org"
+    #logo = "css/images/logo.png"
     disable_mathjax = false # set to true to disable MathJax
     
 
     # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = ["post", "events"]
+    mainSections = ["post", "events", "blog"]
 
     # Format dates with Go's time formatting
     date_format = "2006-01-02"
@@ -111,6 +111,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params.widgets]
     recent_articles = true
     categories = true
-    tags = false
-    tag_cloud = true
+    tags = true
+    tag_cloud = false
     
