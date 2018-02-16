@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>http://www.dsup.org/2018/02/15/data-science-in-practice-fcul-rmd/</loc>
-    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.dsup.org/2018/02/14/resources/</loc>
     <lastmod>2018-02-14T00:00:00+00:00</lastmod>
   </url>
@@ -70,13 +65,13 @@
   </url>
   
   <url>
-    <loc>http://www.dsup.org/categories/events/</loc>
+    <loc>http://www.dsup.org/tags/events/</loc>
     <lastmod>2018-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.dsup.org/tags/events/</loc>
+    <loc>http://www.dsup.org/categories/events/</loc>
     <lastmod>2018-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -89,7 +84,7 @@
   
   <url>
     <loc>http://www.dsup.org/post/</loc>
-    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

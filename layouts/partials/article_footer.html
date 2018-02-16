@@ -1,10 +1,10 @@
 <footer class="article-footer">
-    <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
+    <a data-url="{{ .RelPermalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
         <i class="fa fa-share"></i>
         {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
     </a>
     {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
-    <a href="{{ .Permalink }}#disqus_thread" class="article-comment-link">
+    <a href="{{ .RelPermalink }}#disqus_thread" class="article-comment-link">
         {{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
     </a>
     {{end}}
@@ -23,7 +23,7 @@
             e.stopPropagation();
 
             var $this = $(this),
-                url = $this.attr('data-url'),
+                url = location.protocol + '//' + location.host + $this.attr('data-url'),
                 encodedUrl = encodeURIComponent(url),
                 id = 'article-share-box-' + $this.attr('data-id'),
                 offset = $this.offset(),

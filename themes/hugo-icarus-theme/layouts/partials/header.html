@@ -55,7 +55,7 @@
 
           {{ range .Site.Params.menu }}
           {{ if not .before }}
-          <td><a class="main-nav-link" href="{{ .link  | absURL }}">{{ .label }}</a></td>
+          <td><a class="main-nav-link" href="{{ .link }}">{{ .label }}</a></td>
           {{ end }}
           {{ end }}
           <td>
