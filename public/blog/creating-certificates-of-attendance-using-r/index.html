@@ -51,7 +51,7 @@
 
 <meta itemprop="datePublished" content="2018-02-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-02-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="331">
+<meta itemprop="wordCount" content="577">
 
   <meta itemprop="image" content="http://www.dsup.org/Example_Certificate.png">
 
@@ -99,11 +99,11 @@
 
           
           
-          <a class="main-nav-link" href="/events/data-science-in-practice-fcul-rmd">Events</a>
+          <a class="main-nav-link" href="/events/">Events</a>
           
           
           
-          <a class="main-nav-link" href="/blog/creating-certificates-of-attendance-using-r">Blog</a>
+          <a class="main-nav-link" href="/blog/">Blog</a>
           
           
       </nav>
@@ -140,11 +140,11 @@
 
           
           
-          <td><a class="main-nav-link" href="/events/data-science-in-practice-fcul-rmd">Events</a></td>
+          <td><a class="main-nav-link" href="/events/">Events</a></td>
           
           
           
-          <td><a class="main-nav-link" href="/blog/creating-certificates-of-attendance-using-r">Blog</a></td>
+          <td><a class="main-nav-link" href="/blog/">Blog</a></td>
           
           
           <td>
@@ -266,6 +266,8 @@
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+            <img src="/banners/Example_Certificate.png" class="article-banner">
+        
 
         <header class="article-header">
     <a href="/blog/creating-certificates-of-attendance-using-r/">
@@ -280,10 +282,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-02-20</time>
             &middot;
-            331
+            577
             words
             &middot;
-            2
+            3
             minute read
         </div>
         
@@ -380,6 +382,84 @@ attendees</code></pre>
 ## 2  PDF/2_Don_Leonardo.pdf  Don Leonardo Tidyverse Basics 6th February 2018
 ## 3 PDF/3_Eva_Jane_Rhys.pdf Eva Jane Rhys Advanced ggplot2 9th February 2018
 ## # ... with 1 more variables: Location &lt;chr&gt;</code></pre>
+</div>
+<div id="certificate-template" class="section level2">
+<h2>Certificate Template</h2>
+<p>Next we developed a certificate template using R markdown, with tags (i.e. <code>&lt;&lt; ... &gt;&gt;</code>) for the attendee and event information. Our template is saved in a file called <code>Certificate_Rmd_Template.txt</code>:</p>
+<pre class="r"><code>---
+title: &#39;&#39;
+output: pdf_document
+latex_engine: xelatex
+classoption: landscape
+header-includes:
+- \renewcommand{\familydefault}{\sfdefault}
+---
+
+\pagenumbering{gobble}
+
+\begin{center}
+  {\Huge\bf Certificate of Attendance} \\
+  \vfill
+  {\Huge\bf &lt;&lt;ATTENDEE_NAME&gt;&gt;} \\
+  \vfill
+  {\Huge\it &lt;&lt;EVENT_NAME&gt;&gt;}
+  \bigskip \\
+  {\Large\it  &lt;&lt;EVENT_DATE&gt;&gt;}
+  \bigskip \\
+  {\Large\it &lt;&lt;EVENT_LOCATION&gt;&gt;} \\
+\end{center}
+
+\vfill
+
+\begin{center}
+\includegraphics[height=4cm]{images/Rlogo.png}
+\includegraphics[height=4cm]{images/NotHexLogo.png}
+\end{center}</code></pre>
+</div>
+<div id="certificate-generation" class="section level2">
+<h2>Certificate Generation</h2>
+<p>The certificates were generated using a function that combines the previous steps. The comments in the function code below describe what is going on.</p>
+<pre class="r"><code>certificate &lt;- function(template, attendeeName, event, eDate, eLocation, outPDF, knitDir){
+  cat(&quot;\n Starting:&quot;, outPDF, &quot;\n&quot;)
+
+  # Create a temporary Rmd file with the attendee and event information.  
+  templateCert &lt;- read_file(template)
+  tmpRmd &lt;- templateCert %&gt;%
+    str_replace(&quot;&lt;&lt;ATTENDEE_NAME&gt;&gt;&quot;, attendeeName) %&gt;%
+    str_replace(&quot;&lt;&lt;EVENT_NAME&gt;&gt;&quot;, event) %&gt;%
+    str_replace(&quot;&lt;&lt;EVENT_DATE&gt;&gt;&quot;, eDate) %&gt;%
+    str_replace(&quot;&lt;&lt;EVENT_LOCATION&gt;&gt;&quot;, eLocation)
+  
+  # The knitdir has to be defined for the rmarkdown::render to work.
+  RmdFile &lt;- tempfile(tmpdir = knitDir, fileext = &quot;.Rmd&quot;)
+  write_file(tmpRmd, RmdFile)
+
+  # Creating the certificates using R markdown.
+  rmarkdown::render(RmdFile, output_file = outPDF, quiet = TRUE)
+  
+  # Temporary .Rmd file can be deleted.
+  file.remove(RmdFile)
+  cat(&quot;\n Finished:&quot;, outPDF, &quot;\n&quot;)
+}</code></pre>
+<p>Now we can create all the certificates by looping over the attendee <code>data.frame</code>.</p>
+<pre class="r"><code>for (i in seq_len(nrow(attendees))) {
+  with(attendees,
+       certificate(template = &quot;Certificate_Rmd_Tempate.txt&quot;,
+                   Name[i], Event[i], Date[i], Location[i], filePDF[i], here())
+  )
+}</code></pre>
+<pre><code>## 
+##  Starting: PDF/1_Nina_Maccari.pdf 
+## 
+##  Finished: PDF/1_Nina_Maccari.pdf 
+## 
+##  Starting: PDF/2_Don_Leonardo.pdf 
+## 
+##  Finished: PDF/2_Don_Leonardo.pdf 
+## 
+##  Starting: PDF/3_Eva_Jane_Rhys.pdf 
+## 
+##  Finished: PDF/3_Eva_Jane_Rhys.pdf</code></pre>
 </div>
 <div id="summary" class="section level2">
 <h2>Summary</h2>
