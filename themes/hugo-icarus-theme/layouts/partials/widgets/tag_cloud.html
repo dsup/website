@@ -7,7 +7,7 @@
     </h3>
     <div class="widget tagcloud">
         {{ range $name, $items := .Site.Taxonomies.tags }}
-        {{ $url := printf "%s/%s" "tags" ($name | urlize | lower)}}
+        {{ $url := printf "%s/%s" "tags" ($name | urlize)}}
         <a href="{{ $url | absURL }}" style="font-size: 12px;">{{ $name }}</a>
         {{ end }}
     </div>

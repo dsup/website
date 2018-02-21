@@ -4,13 +4,18 @@ author: Saghir Bashir
 date: '2018-02-15'
 slug: data-science-education-some-thoughts
 categories: ["Blog"]
-#menu: "main"
-tags: ["data science", "Statistics", "Accessibility", "learning", "teaching", "R"]
+tags: ["data science", "Statistics", "Accessibility", "learning", "teaching", "R language"]
 banner: "banners/world_access.jpeg"
+description: 'In this post I have shared some of my thoughts on how data science
+education can be strengthened. I discussed integrating real life data
+science practices into learning and development activities especially by
+engaging subject matter experts and better integration of statistical
+methods. If you want real global reach then integrate access to Majority
+World and austerity affected countries into your offerings. By doing so
+you will also develop.'
 ---
 
 *Saghir Bashir (@ilustat)*
-*7 Feb 2018*
 
 Life scientists, economists, ecologists, computer scientists, social
 scientists, linguists, mathematicians, physcists and many others have 

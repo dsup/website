@@ -17,7 +17,9 @@ nodateline: true
 
 **R programming**
 
+* https://rweekly.org/
 * http://r4ds.had.co.nz/ [Free online Book]
+
 
 **Python programming**
 

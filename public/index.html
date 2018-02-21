@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-02-15T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-02-20T00:00:00&#43;00:00"/>
 
 
 
@@ -170,7 +170,7 @@
       </div>
       <div class="article-info-block">
         
-          7
+          9
         
         <span>
             Tags
@@ -254,6 +254,163 @@
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+        </a>
+
+        <header class="article-header">
+    <a href="/blog/creating-certificates-of-attendance-using-r/">
+    <h1 class="article-title" itemprop="name">
+        Generating Certificates of Attendance Using R
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-02-20</time>
+            &middot;
+            331
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="/categories/blog">Blog</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="/tags/data-science">Data Science</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/events">events</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/r-markdown">R markdown</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/latex">LaTeX</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/r-language">R language</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event. We used R to automatically generate the certificates using R markdown and LaTeX language.
+            </p>
+            <p class="article-more-link">
+                <a href="/blog/creating-certificates-of-attendance-using-r/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="/blog/creating-certificates-of-attendance-using-r/" data-id="edea8d9c85fea0754e938c6e4dc6bf73" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = location.protocol + '//' + location.host + $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
         <a href="/blog/data-science-education-some-thoughts/" itemprop="url">
             <img src="/banners/world_access.jpeg" class="article-banner">
         
@@ -272,7 +429,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-02-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-02-15</time>
             &middot;
-            1374
+            1371
             words
             &middot;
             7
@@ -320,7 +477,7 @@
                 &middot;
                 
                 
-                <a class="article-category-link" href="/tags/r">R</a>
+                <a class="article-category-link" href="/tags/r-language">R language</a>
                 
                 
             </div>
@@ -331,8 +488,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                Saghir Bashir (@ilustat) 7 Feb 2018
-Life scientists, economists, ecologists, computer scientists, social scientists, linguists, mathematicians, physcists and many others have or are choosing data science as a career. The treasure trove of backgrounds presents knowledge sharing opportunities and challenges alike. However for newcomers this career transition and continuous development can be overwhelming and leave some of them with feelings of not belonging or lacking competence, characteristics of impostor’s syndrome. Educators, mentors, trainers and managers have a crucial role to play in developing newcomers to become competent and confident data scientists.
+                In this post I have shared some of my thoughts on how data science education can be strengthened. I discussed integrating real life data science practices into learning and development activities especially by engaging subject matter experts and better integration of statistical methods. If you want real global reach then integrate access to Majority World and austerity affected countries into your offerings. By doing so you will also develop.
             </p>
             <p class="article-more-link">
                 <a href="/blog/data-science-education-some-thoughts/">
@@ -602,7 +758,7 @@ Find more about this project on our webpage and save your spot for this amazing 
             <p>
                 Data Science Thinking
  https://medium.com/@d_spiegel [Articles]  R programming
- http://r4ds.had.co.nz/ [Free online Book]  Python programming
+ https://rweekly.org/ http://r4ds.had.co.nz/ [Free online Book]  Python programming
  https://jakevdp.github.io/PythonDataScienceHandbook/ [Free online Book]  Other
  https://www.datascienceatthecommandline.com/ [Free online Book]  
             </p>
@@ -699,36 +855,6 @@ Find more about this project on our webpage and save your spot for this amazing 
    	
     	<aside id="sidebar">
     
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Recents
-    </h3>
-    <div class="widget">
-        <ul id="recent-post">
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="/2018/02/14/resources/" class="thumbnail">
-                    
-                        <span style="background-image:url(/banners/resources.jpeg)" alt="Data Science Unplugged" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="/2018/02/14/resources/" class="title">Resources</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-02-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-02-14</time>
-                    </p>
-                </div>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
 
     
 
@@ -743,7 +869,7 @@ Find more about this project on our webpage and save your spot for this amazing 
                 <a class="category-list-link" href="/categories/blog">
                     blog
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -784,13 +910,21 @@ Find more about this project on our webpage and save your spot for this amazing 
                 <a class="category-list-link" href="/tags/data-science">
                     data-science
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">
                 
                 <a class="category-list-link" href="/tags/events">
                     events
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/latex">
+                    latex
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -805,8 +939,16 @@ Find more about this project on our webpage and save your spot for this amazing 
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="/tags/r">
-                    r
+                <a class="category-list-link" href="/tags/r-language">
+                    r-language
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/r-markdown">
+                    r-markdown
                 </a>
                 <span class="category-list-count">1</span>
             </li>

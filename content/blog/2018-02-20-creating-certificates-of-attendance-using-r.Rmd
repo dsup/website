@@ -1,0 +1,87 @@
+---
+title: Generating Certificates of Attendance Using R
+author: Saghir Bashir
+date: '2018-02-20'
+slug: creating-certificates-of-attendance-using-r
+categories: ["Blog"]
+tags: ["Data Science", "events", "R markdown", "LaTeX", "R language"]
+banner: ''
+description: "Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community 
+event. We used R to automatically generate the certificates using R markdown and LaTeX language."
+images: [Example_Certificate.png]
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+options(width = 90)
+```
+
+Sometimes after an event you need to issue certificates to the participants. 
+How do you normally produce several certificates automatically? There are 
+different ways to do it and here we share our approach after a recent community 
+event[^1]. We used R to automatically generate the certificates using R 
+markdown and LaTeX language.
+
+## Objective
+
+The key objective was to produce PDF certificates that could be emailed to 
+attendees. 
+
+![](/images/Example_Certificate.png)
+
+## How did it work?
+
+We started with a certificate template in R markdown format (with LateX) containing 
+the following tags `<<ATTENDEE_NAME>>`, `<<EVENT_NAME>>`, `<<EVENT_DATE>>` and
+`<<EVENT_LOCATION>>`. These tags were replaced by attendee and event information 
+from a `data.frame`. ` The PDF certificates were produced using rmarkdown::render()`
+whilst looping over the attendee `data.frame`.
+
+## Requirements
+
+1. A fixed working directory using `set_here()`[^2].
+
+2. Dataset with attendee and event (name, date and location) information.
+
+3. A certificate template in R markdown format.
+
+## Set up
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(rmarkdown)
+library(stringr)
+library(here)
+
+set_here() # Need this later especially when rendering R markdown
+```
+
+
+## Dataset of Attendees
+
+Let assume that our dataset of attendees is as follow:
+```{r attendeeData, echo=TRUE, eval=TRUE, message=FALSE}
+# Read in the attendee data
+attendees <- read_csv("AttendeeList.csv") %>%
+  mutate(filePDF = str_c("PDF/", row_number(), "_",
+                         str_replace_all(Name, fixed(" "), "_"), ".pdf")) %>%
+  select(filePDF, Name, Event, Date, Location)
+attendees
+```
+
+## Summary
+
+We have presented a way to create PDF certificates of attendance based on a user 
+defined "template". The template was populated with the attendee and event 
+information from which PDF certificates were genereated using R markdown. Our 
+code can be run directly from the `R` console or as a batch job thanks to the
+`rmarkdown` and `here` packages. 
+
+
+[^1]: [Data Science Unplugged](dsup.org): "Data Science in Practice" 
+[Event](https://www.meetup.com/Data-Science-Unplugged/events/246963169/)
+
+[^2]: See [Jenny Bryan's excellent 
+article](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)
+about using the `here` package
+
+
