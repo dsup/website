@@ -66,7 +66,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[params.menu]]
     before = false
     label  = "Blog"
-    link   = "/blog/data-science-education-some-thoughts"
+    link   = "/blog/creating-certificates-of-attendance-using-r"
 
 
 # Enter a link for the follow button on the left
