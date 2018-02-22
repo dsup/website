@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Data Science Unplugged</title>
-    <link>/tags/</link>
+    <link>http://www.dsup.org/tags/</link>
     <description>Recent content in Tags on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Thu, 15 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dsup.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Accessibility</title>
-      <link>/tags/accessibility/</link>
+      <link>http://www.dsup.org/tags/accessibility/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/accessibility/</guid>
+      <guid>http://www.dsup.org/tags/accessibility/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>/tags/data-science/</link>
+      <link>http://www.dsup.org/tags/data-science/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-science/</guid>
+      <guid>http://www.dsup.org/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Events</title>
-      <link>/tags/events/</link>
+      <link>http://www.dsup.org/tags/events/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/events/</guid>
+      <guid>http://www.dsup.org/tags/events/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Latex</title>
-      <link>/tags/latex/</link>
+      <link>http://www.dsup.org/tags/latex/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/latex/</guid>
+      <guid>http://www.dsup.org/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning</title>
-      <link>/tags/learning/</link>
+      <link>http://www.dsup.org/tags/learning/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/learning/</guid>
+      <guid>http://www.dsup.org/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Language</title>
-      <link>/tags/r-language/</link>
+      <link>http://www.dsup.org/tags/r-language/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-language/</guid>
+      <guid>http://www.dsup.org/tags/r-language/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>http://www.dsup.org/tags/r-markdown/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>http://www.dsup.org/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>/tags/statistics/</link>
+      <link>http://www.dsup.org/tags/statistics/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/statistics/</guid>
+      <guid>http://www.dsup.org/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>/tags/teaching/</link>
+      <link>http://www.dsup.org/tags/teaching/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/teaching/</guid>
+      <guid>http://www.dsup.org/tags/teaching/</guid>
       <description></description>
     </item>
     

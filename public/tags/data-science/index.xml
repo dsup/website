@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Science on Data Science Unplugged</title>
-    <link>/tags/data-science/</link>
+    <link>http://www.dsup.org/tags/data-science/</link>
     <description>Recent content in Data Science on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dsup.org/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Generating Certificates of Attendance Using R</title>
-      <link>/blog/creating-certificates-of-attendance-using-r/</link>
+      <link>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/blog/creating-certificates-of-attendance-using-r/</guid>
+      <guid>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</guid>
       <description>Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
 Objective The key objective was to produce PDF certificates that could be emailed to attendees.
  How did it work?</description>
@@ -25,20 +25,20 @@ Objective The key objective was to produce PDF certificates that could be emaile
     
     <item>
       <title>Data Science Education: Some Thoughts</title>
-      <link>/blog/data-science-education-some-thoughts/</link>
+      <link>http://www.dsup.org/blog/data-science-education-some-thoughts/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/blog/data-science-education-some-thoughts/</guid>
+      <guid>http://www.dsup.org/blog/data-science-education-some-thoughts/</guid>
       <description>Saghir Bashir (ilustat.com)
 Life scientists, economists, ecologists, computer scientists, social scientists, linguists, mathematicians, physcists and many others have or are choosing data science as a career. The treasure trove of backgrounds presents knowledge sharing opportunities and challenges alike. However for newcomers this career transition and continuous development can be overwhelming and leave some of them with feelings of not belonging or lacking competence, characteristics of impostor’s syndrome. Educators, mentors, trainers and managers have a crucial role to play in developing newcomers to become competent and confident data scientists.</description>
     </item>
     
     <item>
       <title>Data Science in Practice @FCUL</title>
-      <link>/events/data-science-in-practice-fcul-rmd/</link>
+      <link>http://www.dsup.org/events/data-science-in-practice-fcul-rmd/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/events/data-science-in-practice-fcul-rmd/</guid>
+      <guid>http://www.dsup.org/events/data-science-in-practice-fcul-rmd/</guid>
       <description>This time DSup brings you a full-day event! An informal and relaxed event, sharing stories from different speakers, to help students in the transition from academia into their professional life.
 Find more about this project on our webpage and save your spot for this amazing joint meetup!</description>
     </item>
