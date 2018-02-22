@@ -23,8 +23,7 @@ markdown and LaTeX language.
 
 ## Objective
 
-The key objective was to produce PDF certificates that could be emailed to 
-attendees. 
+The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example). 
 
 ## How did it work?
 
@@ -58,8 +57,7 @@ set_here() # Need this later especially when rendering R markdown
 
 Let assume that our dataset of attendees is as follow:
 ```{r attendeeData, echo=TRUE, eval=TRUE, message=FALSE}
-# Read in the attendee data
-attendees <- read_csv("AttendeeList.csv") %>%
+attendees <- read_csv(here("AttendeeList.csv")) %>%
   mutate(filePDF = str_c("PDF/", row_number(), "_",
                          str_replace_all(Name, fixed(" "), "_"), ".pdf")) %>%
   select(filePDF, Name, Event, Date, Location)
@@ -123,7 +121,7 @@ certificate <- function(template, attendeeName, event, eDate, eLocation, outPDF,
   write_file(tmpRmd, RmdFile)
 
   # Creating the certificates using R markdown.
-  rmarkdown::render(RmdFile, output_file = outPDF, quiet = TRUE)
+  rmarkdown::render(RmdFile, output_file = here(outPDF), quiet = TRUE)
   
   # Temporary .Rmd file can be deleted.
   file.remove(RmdFile)
@@ -137,19 +135,21 @@ Now we can create all the certificates by looping over the attendee
 ```{r createPDFs, echo=TRUE, eval=TRUE, message=FALSE}
 for (i in seq_len(nrow(attendees))) {
   with(attendees,
-       certificate(template = "Certificate_Rmd_Tempate.txt",
+       certificate(template = here("Certificate_Rmd_Tempate.txt"),
                    Name[i], Event[i], Date[i], Location[i], filePDF[i], here())
   )
 }
 ```
 
+You can view the PDF certificates:
+
+* [1_Nina_Maccari.pdf](/blog/PDF/1_Nina_Maccari.pdf)
+* [2_Don_Leonardo.pdf](/blog/PDF/2_Don_Leonardo.pdf)
+* [3_Eva_Jane_Rhys.pdf](/blog/PDF/3_Eva_Jane_Rhys.pdf)
+
 ## Summary
 
-We have presented a way to create PDF certificates of attendance based on a user 
-defined "template". The template was populated with the attendee and event 
-information from which PDF certificates were genereated using R markdown. Our 
-code can be run directly from the `R` console or as a batch job thanks to the
-`rmarkdown` and `here` packages. 
+We have presented a way to create PDF certificates of attendance based on a user defined “template”. The template was populated with the attendee and event information from which PDF certificates were generated using R markdown. This approach can be used to produce other types of documents, for example, "mail merges" and setting different exercises or exams for students. Our code can be run directly from the R console or as a batch job thanks to the `rmarkdown` and `here` packages.
 
 
 [^1]: [Data Science Unplugged](dsup.org): "Data Science in Practice" 

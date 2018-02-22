@@ -16,7 +16,7 @@ images: [Example_Certificate.png]
 <p>Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. We used R to automatically generate the certificates using R markdown and LaTeX language.</p>
 <div id="objective" class="section level2">
 <h2>Objective</h2>
-<p>The key objective was to produce PDF certificates that could be emailed to attendees.</p>
+<p>The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</p>
 </div>
 <div id="how-did-it-work" class="section level2">
 <h2>How did it work?</h2>
@@ -42,8 +42,7 @@ set_here() # Need this later especially when rendering R markdown</code></pre>
 <div id="dataset-of-attendees" class="section level2">
 <h2>Dataset of Attendees</h2>
 <p>Let assume that our dataset of attendees is as follow:</p>
-<pre class="r"><code># Read in the attendee data
-attendees &lt;- read_csv(&quot;AttendeeList.csv&quot;) %&gt;%
+<pre class="r"><code>attendees &lt;- read_csv(here(&quot;AttendeeList.csv&quot;)) %&gt;%
   mutate(filePDF = str_c(&quot;PDF/&quot;, row_number(), &quot;_&quot;,
                          str_replace_all(Name, fixed(&quot; &quot;), &quot;_&quot;), &quot;.pdf&quot;)) %&gt;%
   select(filePDF, Name, Event, Date, Location)
@@ -108,7 +107,7 @@ header-includes:
   write_file(tmpRmd, RmdFile)
 
   # Creating the certificates using R markdown.
-  rmarkdown::render(RmdFile, output_file = outPDF, quiet = TRUE)
+  rmarkdown::render(RmdFile, output_file = here(outPDF), quiet = TRUE)
   
   # Temporary .Rmd file can be deleted.
   file.remove(RmdFile)
@@ -117,7 +116,7 @@ header-includes:
 <p>Now we can create all the certificates by looping over the attendee <code>data.frame</code>.</p>
 <pre class="r"><code>for (i in seq_len(nrow(attendees))) {
   with(attendees,
-       certificate(template = &quot;Certificate_Rmd_Tempate.txt&quot;,
+       certificate(template = here(&quot;Certificate_Rmd_Tempate.txt&quot;),
                    Name[i], Event[i], Date[i], Location[i], filePDF[i], here())
   )
 }</code></pre>
@@ -133,10 +132,16 @@ header-includes:
 ##  Starting: PDF/3_Eva_Jane_Rhys.pdf 
 ## 
 ##  Finished: PDF/3_Eva_Jane_Rhys.pdf</code></pre>
+<p>You can view the PDF certificates:</p>
+<ul>
+<li><a href="/blog/PDF/1_Nina_Maccari.pdf">1_Nina_Maccari.pdf</a></li>
+<li><a href="/blog/PDF/2_Don_Leonardo.pdf">2_Don_Leonardo.pdf</a></li>
+<li><a href="/blog/PDF/3_Eva_Jane_Rhys.pdf">3_Eva_Jane_Rhys.pdf</a></li>
+</ul>
 </div>
 <div id="summary" class="section level2">
 <h2>Summary</h2>
-<p>We have presented a way to create PDF certificates of attendance based on a user defined “template”. The template was populated with the attendee and event information from which PDF certificates were genereated using R markdown. Our code can be run directly from the <code>R</code> console or as a batch job thanks to the <code>rmarkdown</code> and <code>here</code> packages.</p>
+<p>We have presented a way to create PDF certificates of attendance based on a user defined “template”. The template was populated with the attendee and event information from which PDF certificates were generated using R markdown. This approach can be used to produce other types of documents, for example, “mail merges” and setting different exercises or exams for students. Our code can be run directly from the R console or as a batch job thanks to the <code>rmarkdown</code> and <code>here</code> packages.</p>
 </div>
 <div class="footnotes">
 <hr />

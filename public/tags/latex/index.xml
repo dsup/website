@@ -19,8 +19,7 @@
       
       <guid>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</guid>
       <description>Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
-Objective The key objective was to produce PDF certificates that could be emailed to attendees.
- How did it work?</description>
+Objective The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</description>
     </item>
     
   </channel>
