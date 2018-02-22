@@ -26,8 +26,6 @@ markdown and LaTeX language.
 The key objective was to produce PDF certificates that could be emailed to 
 attendees. 
 
-![](/images/Example_Certificate.png)
-
 ## How did it work?
 
 We started with a certificate template in R markdown format (with LateX) containing 
