@@ -30,7 +30,7 @@ The key objective was to produce PDF certificates that could be emailed to atten
 We started with a certificate template in R markdown format (with LateX) containing 
 the following tags `<<ATTENDEE_NAME>>`, `<<EVENT_NAME>>`, `<<EVENT_DATE>>` and
 `<<EVENT_LOCATION>>`. These tags were replaced by attendee and event information 
-from a `data.frame`. ` The PDF certificates were produced using rmarkdown::render()`
+from a `data.frame`. The PDF certificates were produced using `rmarkdown::render()`
 whilst looping over the attendee `data.frame`.
 
 ## Requirements

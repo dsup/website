@@ -79,7 +79,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # by entering your username. The links to your account will be
 # created automatically.
     github          = "dsup"
-    meetup          = "https://www.meetup.com/Data-Science-Unplugged"
+    meetup          = "Data-Science-Unplugged"
     #bitbucket       = ""
     #jsfiddle        = ""
     #codepen         = ""
