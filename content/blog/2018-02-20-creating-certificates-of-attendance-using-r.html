@@ -1,0 +1,152 @@
+---
+title: Generating Certificates of Attendance Using R
+author: Saghir Bashir
+date: '2018-02-20'
+slug: creating-certificates-of-attendance-using-r
+categories: ["Blog"]
+tags: ["Data Science", "events", "R markdown", "LaTeX", "R language"]
+banner: 'banners/Example_Certificate.png'
+description: "Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community 
+event. We used R to automatically generate the certificates using R markdown and LaTeX language."
+images: [Example_Certificate.png]
+---
+
+
+
+<p>Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. We used R to automatically generate the certificates using R markdown and LaTeX language.</p>
+<div id="objective" class="section level2">
+<h2>Objective</h2>
+<p>The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</p>
+</div>
+<div id="how-did-it-work" class="section level2">
+<h2>How did it work?</h2>
+<p>We started with a certificate template in R markdown format (with LateX) containing the following tags <code>&lt;&lt;ATTENDEE_NAME&gt;&gt;</code>, <code>&lt;&lt;EVENT_NAME&gt;&gt;</code>, <code>&lt;&lt;EVENT_DATE&gt;&gt;</code> and <code>&lt;&lt;EVENT_LOCATION&gt;&gt;</code>. These tags were replaced by attendee and event information from a <code>data.frame</code>. The PDF certificates were produced using <code>rmarkdown::render()</code> whilst looping over the attendee <code>data.frame</code>.</p>
+</div>
+<div id="requirements" class="section level2">
+<h2>Requirements</h2>
+<ol style="list-style-type: decimal">
+<li><p>A fixed working directory using <code>set_here()</code><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p></li>
+<li><p>Dataset with attendee and event (name, date and location) information.</p></li>
+<li><p>A certificate template in R markdown format.</p></li>
+</ol>
+</div>
+<div id="set-up" class="section level2">
+<h2>Set up</h2>
+<pre class="r"><code>library(tidyverse)
+library(rmarkdown)
+library(stringr)
+library(here)
+
+set_here() # Need this later especially when rendering R markdown</code></pre>
+</div>
+<div id="dataset-of-attendees" class="section level2">
+<h2>Dataset of Attendees</h2>
+<p>Let assume that our dataset of attendees is as follow:</p>
+<pre class="r"><code>attendees &lt;- read_csv(here(&quot;AttendeeList.csv&quot;)) %&gt;%
+  mutate(filePDF = str_c(&quot;PDF/&quot;, row_number(), &quot;_&quot;,
+                         str_replace_all(Name, fixed(&quot; &quot;), &quot;_&quot;), &quot;.pdf&quot;)) %&gt;%
+  select(filePDF, Name, Event, Date, Location)
+attendees</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##                   filePDF          Name            Event              Date
+##                     &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;             &lt;chr&gt;
+## 1  PDF/1_Nina_Maccari.pdf  Nina Maccari Tidyverse Basics 6th February 2018
+## 2  PDF/2_Don_Leonardo.pdf  Don Leonardo Tidyverse Basics 6th February 2018
+## 3 PDF/3_Eva_Jane_Rhys.pdf Eva Jane Rhys Advanced ggplot2 9th February 2018
+## # ... with 1 more variables: Location &lt;chr&gt;</code></pre>
+</div>
+<div id="certificate-template" class="section level2">
+<h2>Certificate Template</h2>
+<p>Next we developed a certificate template using R markdown, with tags (i.e. <code>&lt;&lt; ... &gt;&gt;</code>) for the attendee and event information. Our template is saved in a file called <code>Certificate_Rmd_Template.txt</code>:</p>
+<pre class="r"><code>---
+title: &#39;&#39;
+output: pdf_document
+latex_engine: xelatex
+classoption: landscape
+header-includes:
+- \renewcommand{\familydefault}{\sfdefault}
+---
+
+\pagenumbering{gobble}
+
+\begin{center}
+  {\Huge\bf Certificate of Attendance} \\
+  \vfill
+  {\Huge\bf &lt;&lt;ATTENDEE_NAME&gt;&gt;} \\
+  \vfill
+  {\Huge\it &lt;&lt;EVENT_NAME&gt;&gt;}
+  \bigskip \\
+  {\Large\it  &lt;&lt;EVENT_DATE&gt;&gt;}
+  \bigskip \\
+  {\Large\it &lt;&lt;EVENT_LOCATION&gt;&gt;} \\
+\end{center}
+
+\vfill
+
+\begin{center}
+\includegraphics[height=4cm]{images/Rlogo.png}
+\includegraphics[height=4cm]{images/NotHexLogo.png}
+\end{center}</code></pre>
+</div>
+<div id="certificate-generation" class="section level2">
+<h2>Certificate Generation</h2>
+<p>The certificates were generated using a function that combines the previous steps. The comments in the function code below describe what is going on.</p>
+<pre class="r"><code>certificate &lt;- function(template, attendeeName, event, eDate, eLocation, outPDF, knitDir){
+  cat(&quot;\n Starting:&quot;, outPDF, &quot;\n&quot;)
+
+  # Create a temporary Rmd file with the attendee and event information.  
+  templateCert &lt;- read_file(template)
+  tmpRmd &lt;- templateCert %&gt;%
+    str_replace(&quot;&lt;&lt;ATTENDEE_NAME&gt;&gt;&quot;, attendeeName) %&gt;%
+    str_replace(&quot;&lt;&lt;EVENT_NAME&gt;&gt;&quot;, event) %&gt;%
+    str_replace(&quot;&lt;&lt;EVENT_DATE&gt;&gt;&quot;, eDate) %&gt;%
+    str_replace(&quot;&lt;&lt;EVENT_LOCATION&gt;&gt;&quot;, eLocation)
+  
+  # The knitdir has to be defined for the rmarkdown::render to work.
+  RmdFile &lt;- tempfile(tmpdir = knitDir, fileext = &quot;.Rmd&quot;)
+  write_file(tmpRmd, RmdFile)
+
+  # Creating the certificates using R markdown.
+  rmarkdown::render(RmdFile, output_file = here(outPDF), quiet = TRUE)
+  
+  # Temporary .Rmd file can be deleted.
+  file.remove(RmdFile)
+  cat(&quot;\n Finished:&quot;, outPDF, &quot;\n&quot;)
+}</code></pre>
+<p>Now we can create all the certificates by looping over the attendee <code>data.frame</code>.</p>
+<pre class="r"><code>for (i in seq_len(nrow(attendees))) {
+  with(attendees,
+       certificate(template = here(&quot;Certificate_Rmd_Tempate.txt&quot;),
+                   Name[i], Event[i], Date[i], Location[i], filePDF[i], here())
+  )
+}</code></pre>
+<pre><code>## 
+##  Starting: PDF/1_Nina_Maccari.pdf 
+## 
+##  Finished: PDF/1_Nina_Maccari.pdf 
+## 
+##  Starting: PDF/2_Don_Leonardo.pdf 
+## 
+##  Finished: PDF/2_Don_Leonardo.pdf 
+## 
+##  Starting: PDF/3_Eva_Jane_Rhys.pdf 
+## 
+##  Finished: PDF/3_Eva_Jane_Rhys.pdf</code></pre>
+<p>You can view the PDF certificates:</p>
+<ul>
+<li><a href="/blog/PDF/1_Nina_Maccari.pdf">1_Nina_Maccari.pdf</a></li>
+<li><a href="/blog/PDF/2_Don_Leonardo.pdf">2_Don_Leonardo.pdf</a></li>
+<li><a href="/blog/PDF/3_Eva_Jane_Rhys.pdf">3_Eva_Jane_Rhys.pdf</a></li>
+</ul>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>We have presented a way to create PDF certificates of attendance based on a user defined “template”. The template was populated with the attendee and event information from which PDF certificates were generated using R markdown. This approach can be used to produce other types of documents, for example, “mail merges” and setting different exercises or exams for students. Our code can be run directly from the R console or as a batch job thanks to the <code>rmarkdown</code> and <code>here</code> packages.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="dsup.org">Data Science Unplugged</a>: “Data Science in Practice” <a href="https://www.meetup.com/Data-Science-Unplugged/events/246963169/">Event</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>See <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/">Jenny Bryan’s excellent article</a> about using the <code>here</code> package<a href="#fnref2">↩</a></p></li>
+</ol>
+</div>

@@ -7,8 +7,8 @@
         <ul class="category-list">
             {{ range $name, $items := .Site.Taxonomies.categories }}
             <li class="category-list-item">
-                {{ $url := printf "%s/%s" "categories" ($name | urlize | lower)}}
-                <a class="category-list-link" href="{{ $url | absURL }}">
+                {{ $url := printf "%s/%s" "categories" ($name | urlize)}}
+                <a class="category-list-link" href="{{ $url | relURL }}">
                     {{ $name }}
                 </a>
                 <span class="category-list-count">{{ len $items }}</span>

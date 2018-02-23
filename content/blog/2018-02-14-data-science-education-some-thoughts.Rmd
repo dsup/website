@@ -1,0 +1,186 @@
+---
+title: 'Data Science Education: Some Thoughts'
+author: Saghir Bashir
+date: '2018-02-15'
+slug: data-science-education-some-thoughts
+categories: ["Blog"]
+tags: ["data science", "Statistics", "Accessibility", "learning", "teaching", "R language"]
+banner: "banners/world_access.jpeg"
+description: 'In this post I have shared some of my thoughts on how data science
+education can be strengthened. I discussed integrating real life data
+science practices into learning and development activities especially by
+engaging subject matter experts and better integration of statistical
+methods. If you want real global reach then integrate access to Majority
+World and austerity affected countries into your offerings. By doing so
+you will also develop.'
+---
+
+*Saghir Bashir (ilustat.com)*
+
+Life scientists, economists, ecologists, computer scientists, social
+scientists, linguists, mathematicians, physcists and many others have 
+or are choosing data science as a career. The treasure trove of 
+backgrounds presents knowledge sharing opportunities and challenges 
+alike. However for newcomers this career transition and continuous 
+development can be overwhelming and leave some of them with feelings 
+of not belonging or lacking competence, characteristics of impostor’s 
+syndrome. Educators, mentors, trainers and managers have a crucial role 
+to play in developing newcomers to become competent and confident data 
+scientists.
+
+Data science is essentially composed of:
+
+1.  Subject matter expertise
+2.  Statistics
+3.  Statistical programming
+
+An individual could be proficient in all three but that is not usually
+the case. There could be different individuals representing the three
+components which in a sense is still “data science”. In reality,
+newcomers want to master 2 and 3 often placing a greater emphasis on 3.
+That leaves a gap in 1 and 2, the subject matter expertise and
+statistics. These are the foundations on which good data science is
+built and which need to be emphasised more in the learning and
+development process.
+
+Data science starts with a collaboration with or request from a subject
+matter expert (e.g. ecologist, biologist, economist). The starting point
+could be some existing data or the need to collect new data to answer
+some questions of interest (e.g. identifying factors that influence some
+outcome). The data will have some history and definitions that need to
+be understood by the data scientist before embarking on any programming
+or statistical analysis. From the beginning it is usually an iterative
+process between the data scientist and the subject matter expert until
+the work is finalised. Building this into the learning and development
+of newcomers to data science is essential but no easy feat. This
+challenge is programming language independent.
+
+There are many learning resources for most statistical programming
+languages (including for R) and data science. Newcomers are taught to
+perform different tasks, for example, plot data on a graph, read in
+data, create new variables, etc. The next step tends to be for them to
+explore real datasets often with limited to no statistical and subject
+area knowledge support leaving them vulnerable to making basic mistakes
+and adopting bad practices. Addressing these issues early could save a
+lot of heartache later.
+
+The first point to accept is that there is no one size fits all
+approach. Tailoring a plan for each individual is in most situations
+unrealistic and unfeasible. However there are some common features that
+should be considered whichever approach is taken.
+
+### Finding Example Data
+
+I stress and procrastinate the most about finding “the right” dataset(s)
+to stimulate discussion and interest. Many of the real life dataset that
+I would like to use are subject to confidentiality clauses or contain
+sensitive data that cannot be shared. Fortunately there are many R
+packages with datasets that can be used[^1]. Knowing which one is
+“right” means understanding your target audience. A dataset that works
+well in one environment may not work in another although some can have
+global appeal (e.g. the `gapminder` data). Choose carefully.
+
+Having the “right” dataset means having real life questions (which
+can be exploratory) that are of interest to the target audience. The 
+answers to these questions should feed into decision making processes 
+or actions that can be taken. A subject matter expert could be consulted 
+for support. This answers the “why” of the data.
+
+The “what”, “why”, “when” and “how” of data **must** be explained before
+the audience start to process and analyse the data. Understanding the
+appropriateness, quality, validity and how the data were pre-processed
+empowers data scientists to find the best path for analysis, again in
+collaboration with the subject matter expert. It seems intuitive until
+you use learning resources where datasets are not (adequately) introduced 
+or are changed without explanation.
+
+### Statistical Analysis
+
+Newcomers are often taught to make their work reproducible and this 
+practice is to be strongly encouraged for good reasons. The bigger 
+aim should be to present “trustworthy data science”[^2] which 
+incorporates reproducibility. It encourages full openness and 
+transparency about all the strengths and weaknesses. This approach can
+be used to nudge newcomers into understanding the methods (models)
+they use and not to treat them as black boxes. A better understanding of
+the methods used increases the quality and value of interactions with
+subject matter experts.
+
+Many newcomers can find the statistical part of data science daunting 
+and complex. Their fears can be eased by making a connection to data as
+described above hence smoothing their route into, what may seem like, an
+“abstract” world of statistics. The key concepts and structure of most
+models can be developed through the questions and data (i.e., design and
+variables) which can then initially be expressed as some “mathematical”
+representation. Assumptions can be discussed and challenged in the
+context of interpreting the results with the subject matter expert. The
+cycle can be closed by addressing what will be communicated (and how) to
+answer the questions of interest.
+
+Good reporting practices[^3] [^4] are important in building a
+culture of full accessibility through openness and transparency. These
+on top of reproducibility strengthen data science work by answering the
+“what” and “why” along with the “how” which in turn will allow the
+“future newcomer” to return to past work more easily. This approach also
+makes the process of handing projects over to others or receiving ongoing
+projects from others much smoother.
+
+### Global Audience
+
+If you practice your data science on a computer that is less than five
+years old with constant access to electricity and internet then
+spare a thought for the Majority World countries (commonly referred to
+as “Third World”) and austerity affected European countries. Having
+taught in and collaborated with people in both classes of countries I
+learnt more about their day to day challenges.
+
+Computers are often desktops connected to CRT monitors, that are more 
+than 10 years old. In austerity affected European countries the public 
+sector faced budget cuts forcing IT needs to very low down on the list 
+of priorities. For most people, their priority was keeping their job even
+with significant reductions in pay and benefits.
+
+It surprises me that so many computers continue to work in Majority
+World countries where electricity is not constant and is lost without
+notice (think of those hard disks). Clearly without electricity there is
+no internet access which even with electricity is not constant either.
+Users can have usage limits which are a function of time and/or download
+limits. Free access to websites and on-line communities, in many cases, is
+a luxury. On-line video training materials can be made accessible by
+providing documents, files and access to audio format or lower quality video. 
+For instance a simple measure of accessibility can be to reference in a 
+video exactly what you are talking about (e.g. “on slide 7...”, "in the
+top right hand side of the graph...") to aid users who have ripped the 
+audio or lower quality video.
+
+If you want a true global reach with your educational materials then
+think of what you can do to reduce the size of what has to be downloaded
+and how your code can run on “less” powerful computers with limited
+internet access. Along with making code readable (*à la* `R tidyverse`) 
+you have the additional challenge of making it accessible which is a 
+great way to learn new R tricks. When faced with these challenges, I 
+use an older low specification laptop for testing purposes when developing 
+or adapting courses.
+
+## Summary
+
+In this post I have shared some of my thoughts on how data science
+education can be strengthened. I discussed integrating real life data
+science practices into learning and development activities especially by
+engaging subject matter experts and better integration of statistical
+methods. If you want real global reach then integrate access to Majority
+World and austerity affected countries into your offerings. By doing so
+you will also develop.
+
+[^1]: For a list of some of datasets available in R see:
+<http://ilustat.com/shared/what_data_r/> (source code at <https://github.com/saghirb/WhatData>)
+
+[^2]: Some slides of a talk I gave about Trustworthy Data Science: 
+<https://speakerdeck.com/saghirb/when-to-trust-and-when-not-to-trust-data-science>
+
+[^3]: Various guidelines for reporting of health research:
+<https://www.equator-network.org/>
+
+[^4]: A Guidance document on Statistical Reporting:
+<https://www.efsa.europa.eu/en/efsajournal/pub/3908>
+

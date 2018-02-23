@@ -1,0 +1,31 @@
+---
+title: Resources
+author: ~
+date: '2018-02-14'
+slug: resources
+categories: []
+tags: []
+menu: "main"
+banner: "banners/resources.jpeg"
+nodateline: true
+---
+
+**Data Science Thinking**
+
+* https://medium.com/@d_spiegel [Articles]
+
+
+**R programming**
+
+* https://rweekly.org/
+* http://r4ds.had.co.nz/ [Free online Book]
+
+
+**Python programming**
+
+* https://jakevdp.github.io/PythonDataScienceHandbook/ [Free online Book]
+
+
+**Other**
+
+* https://www.datascienceatthecommandline.com/ [Free online Book]

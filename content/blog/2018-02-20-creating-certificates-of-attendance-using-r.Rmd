@@ -1,0 +1,162 @@
+---
+title: Generating Certificates of Attendance Using R
+author: Saghir Bashir
+date: '2018-02-20'
+slug: creating-certificates-of-attendance-using-r
+categories: ["Blog"]
+tags: ["Data Science", "events", "R markdown", "LaTeX", "R language"]
+banner: 'banners/Example_Certificate.png'
+description: "Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community 
+event. We used R to automatically generate the certificates using R markdown and LaTeX language."
+images: [Example_Certificate.png]
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+options(width = 90)
+```
+
+Sometimes after an event you need to issue certificates to the participants. 
+How do you normally produce several certificates automatically? There are 
+different ways to do it and here we share our approach after a recent community 
+event[^1]. We used R to automatically generate the certificates using R 
+markdown and LaTeX language.
+
+## Objective
+
+The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example). 
+
+## How did it work?
+
+We started with a certificate template in R markdown format (with LateX) containing 
+the following tags `<<ATTENDEE_NAME>>`, `<<EVENT_NAME>>`, `<<EVENT_DATE>>` and
+`<<EVENT_LOCATION>>`. These tags were replaced by attendee and event information 
+from a `data.frame`. The PDF certificates were produced using `rmarkdown::render()`
+whilst looping over the attendee `data.frame`.
+
+## Requirements
+
+1. A fixed working directory using `set_here()`[^2].
+
+2. Dataset with attendee and event (name, date and location) information.
+
+3. A certificate template in R markdown format.
+
+## Set up
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(rmarkdown)
+library(stringr)
+library(here)
+
+set_here() # Need this later especially when rendering R markdown
+```
+
+
+## Dataset of Attendees
+
+Let assume that our dataset of attendees is as follow:
+```{r attendeeData, echo=TRUE, eval=TRUE, message=FALSE}
+attendees <- read_csv(here("AttendeeList.csv")) %>%
+  mutate(filePDF = str_c("PDF/", row_number(), "_",
+                         str_replace_all(Name, fixed(" "), "_"), ".pdf")) %>%
+  select(filePDF, Name, Event, Date, Location)
+attendees
+```
+
+## Certificate Template
+Next we developed a certificate template using R markdown, with tags (i.e. `<< ... >>`)
+for the attendee and event information. Our template is saved in a file called
+`Certificate_Rmd_Template.txt`:
+```{r exampleTemplate, echo=TRUE, eval=FALSE}
+---
+title: ''
+output: pdf_document
+latex_engine: xelatex
+classoption: landscape
+header-includes:
+- \renewcommand{\familydefault}{\sfdefault}
+---
+
+\pagenumbering{gobble}
+
+\begin{center}
+  {\Huge\bf Certificate of Attendance} \\
+  \vfill
+  {\Huge\bf <<ATTENDEE_NAME>>} \\
+  \vfill
+  {\Huge\it <<EVENT_NAME>>}
+  \bigskip \\
+  {\Large\it  <<EVENT_DATE>>}
+  \bigskip \\
+  {\Large\it <<EVENT_LOCATION>>} \\
+\end{center}
+
+\vfill
+
+\begin{center}
+\includegraphics[height=4cm]{images/Rlogo.png}
+\includegraphics[height=4cm]{images/NotHexLogo.png}
+\end{center}
+```
+
+## Certificate Generation
+
+The certificates were generated using a function that combines the previous steps. 
+The comments in the function code below describe what is going on.
+```{r gerCertificate, echo=TRUE, eval=TRUE}
+certificate <- function(template, attendeeName, event, eDate, eLocation, outPDF, knitDir){
+  cat("\n Starting:", outPDF, "\n")
+
+  # Create a temporary Rmd file with the attendee and event information.  
+  templateCert <- read_file(template)
+  tmpRmd <- templateCert %>%
+    str_replace("<<ATTENDEE_NAME>>", attendeeName) %>%
+    str_replace("<<EVENT_NAME>>", event) %>%
+    str_replace("<<EVENT_DATE>>", eDate) %>%
+    str_replace("<<EVENT_LOCATION>>", eLocation)
+  
+  # The knitdir has to be defined for the rmarkdown::render to work.
+  RmdFile <- tempfile(tmpdir = knitDir, fileext = ".Rmd")
+  write_file(tmpRmd, RmdFile)
+
+  # Creating the certificates using R markdown.
+  rmarkdown::render(RmdFile, output_file = here(outPDF), quiet = TRUE)
+  
+  # Temporary .Rmd file can be deleted.
+  file.remove(RmdFile)
+  cat("\n Finished:", outPDF, "\n")
+}
+
+```
+
+Now we can create all the certificates by looping over the attendee 
+`data.frame`.
+```{r createPDFs, echo=TRUE, eval=TRUE, message=FALSE}
+for (i in seq_len(nrow(attendees))) {
+  with(attendees,
+       certificate(template = here("Certificate_Rmd_Tempate.txt"),
+                   Name[i], Event[i], Date[i], Location[i], filePDF[i], here())
+  )
+}
+```
+
+You can view the PDF certificates:
+
+* [1_Nina_Maccari.pdf](/blog/PDF/1_Nina_Maccari.pdf)
+* [2_Don_Leonardo.pdf](/blog/PDF/2_Don_Leonardo.pdf)
+* [3_Eva_Jane_Rhys.pdf](/blog/PDF/3_Eva_Jane_Rhys.pdf)
+
+## Summary
+
+We have presented a way to create PDF certificates of attendance based on a user defined “template”. The template was populated with the attendee and event information from which PDF certificates were generated using R markdown. This approach can be used to produce other types of documents, for example, "mail merges" and setting different exercises or exams for students. Our code can be run directly from the R console or as a batch job thanks to the `rmarkdown` and `here` packages.
+
+
+[^1]: [Data Science Unplugged](dsup.org): "Data Science in Practice" 
+[Event](https://www.meetup.com/Data-Science-Unplugged/events/246963169/)
+
+[^2]: See [Jenny Bryan's excellent 
+article](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)
+about using the `here` package
+
+
