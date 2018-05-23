@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Learning R vs Learning a Spoken Language &middot; Data Science Unplugged</title>
+    <meta name="generator" content="Hugo 0.30.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Data Science Unplugged">
+    
+      <meta name="description" content="Learning R, like learning anything else, is a process from which you get what you put into it. In this post, I will argue that learning R should be treated like learning a spoken (written) language, i.e., as a continuous process without a truly defined end. Hereafter I will refer to spoken (written) languages as &#34;spoken languages&#34;.">
+    
+    
+    <link rel="canonical" href="/blog/learning-r-vs-learning-a-spoken-language/"/>
+    <link rel="icon" href="/logo.png">
+    <link rel="logo" href="/logo.png"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/monokai.css">
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Learning R vs Learning a Spoken Language" />
+<meta property="og:description" content="Learning R, like learning anything else, is a process from which you get what you put into it. In this post, I will argue that learning R should be treated like learning a spoken (written) language, i.e., as a continuous process without a truly defined end. Hereafter I will refer to spoken (written) languages as &#34;spoken languages&#34;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/" />
+
+  <meta property="og:image" content="http://www.dsup.org/milkovi-444287-unsplash-cropped.jpg" />
+
+
+
+<meta property="article:published_time" content="2018-05-23T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-05-23T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Learning R vs Learning a Spoken Language">
+<meta itemprop="description" content="Learning R, like learning anything else, is a process from which you get what you put into it. In this post, I will argue that learning R should be treated like learning a spoken (written) language, i.e., as a continuous process without a truly defined end. Hereafter I will refer to spoken (written) languages as &#34;spoken languages&#34;.">
+
+
+<meta itemprop="datePublished" content="2018-05-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1895">
+
+  <meta itemprop="image" content="http://www.dsup.org/milkovi-444287-unsplash-cropped.jpg">
+
+
+
+<meta itemprop="keywords" content="Data Science,R language,learning," />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image:src" content="http://www.dsup.org/milkovi-444287-unsplash-cropped.jpg"/>
+<meta name="twitter:title" content="Learning R vs Learning a Spoken Language"/>
+<meta name="twitter:description" content="Learning R, like learning anything else, is a process from which you get what you put into it. In this post, I will argue that learning R should be treated like learning a spoken (written) language, i.e., as a continuous process without a truly defined end. Hereafter I will refer to spoken (written) languages as &#34;spoken languages&#34;."/>
+<meta name="twitter:site" content="@dsup_lx"/>
+
+    <script src="https://use.fontawesome.com/304670a398.js"></script>
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.dsup.org/" id="logo">
+          
+          <span class="site-title">Data Science Unplugged</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">About</a>
+          
+          <a class="main-nav-link" href="/2018/02/14/resources/">Resources</a>
+          
+
+          
+          
+          <a class="main-nav-link" href="/events/">Events</a>
+          
+          
+          
+          <a class="main-nav-link" href="/blog/">Blog</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/css/images/logo.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://www.dsup.org/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">About</a></td>
+          
+          <td><a class="main-nav-link" href="/2018/02/14/resources/">Resources</a></td>
+          
+
+          
+          
+          <td><a class="main-nav-link" href="/events/">Events</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="/blog/">Blog</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://www.dsup.org/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="/css/images/logo.png">
+      
+      <h2 id="name">Data Science Unplugged</h2>
+      <h3 id="title">A community for data science</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Lisbon</span>
+      
+          <a id="follow" href="https://twitter.com/dsup_lx">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        1
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          9
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/dsup" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+<td><a href="//meetup.com/Data-Science-Unplugged" target="_blank" title="Meetup"><i class="fa fa-meetup"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//youtu.be/AuAzc7doWhk" target="_blank" title="YouTube"><i class="fa fa-youtube"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/dsup_lx" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://www.dsup.org/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <img src="/banners/milkovi-444287-unsplash-cropped.jpg" class="article-banner">
+        
+
+        <header class="article-header">
+    <a href="/blog/learning-r-vs-learning-a-spoken-language/">
+    <h1 class="article-title" itemprop="name">
+        Learning R vs Learning a Spoken Language
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-05-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-05-23</time>
+            &middot;
+            1895
+            words
+            &middot;
+            9
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="/categories/blog">Blog</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="/tags/data-science">Data Science</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/r-language">R language</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/learning">learning</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<h1 id="introduction">Introduction</h1>
+
+<p>R has grown in popularity over the years which can be measured by using different
+metrics, for example, R downloads, the number of packages on CRAN<sup class="footnote-ref" id="fnref:cran"><a rel="footnote" href="#fn:cran">1</a></sup>, participation
+in on-line communities, books published and so forth. This growth brings with it
+newcomers who are keen to learn the R programming language.</p>
+
+<p>Learning R, like learning anything else, is a process from which you get what you put
+into it. In this post, I will argue that learning R should be treated like learning a
+spoken (written) language, i.e., as a continuous process without a truly defined end.
+Hereafter I will refer to spoken (written) languages as &ldquo;spoken languages&rdquo;.</p>
+
+<h1 id="learning-a-spoken-language">Learning a Spoken Language</h1>
+
+<p>I had different reasons to learn a spoken language, for example, initially
+to learn some basics (e.g. introducing myself, ordering food, asking directions), know
+enough to live in my new country and to engage with my new hosts. I started by
+learning to introduce myself (the &ldquo;Hello world!&rdquo;<sup class="footnote-ref" id="fnref:HelloWorld"><a rel="footnote" href="#fn:HelloWorld">2</a></sup> phase) and then I built
+on that.</p>
+
+<p>All learning paths require &ldquo;language immersion&rdquo; (i.e., actively reading,
+writing and speaking) which by design incorporates making &ldquo;mistakes&rdquo; as part of the
+process. It takes courage to start to speak (and write) often with the fear of not knowing
+enough but once you do start you learn to auto-correct and learn from others. The more you
+immerse yourself the braver you become as each new thing learnt feeds the next. Even
+if you have an accent or keep making grammatical mistakes you&rsquo;ll find that in most
+situations it won&rsquo;t be too harmful and when they are, hopefully, some kind soul will
+inform you or you will realise yourself (e.g. I often realised from the facial
+expressions and/or body language).</p>
+
+<p>Spoken languages evolve over time. This can be as a result of changes in vocabulary with
+new words entering the lexicon and &ldquo;older&rdquo; ones becoming less popular. The style of the
+language can also change over time and/or between &ldquo;contexts&rdquo; (e.g. legalese versus
+poetry). These changes force us to &ldquo;maintain&rdquo; the language which can be an
+auto-intuitive process that you adapt to quickly (e.g., adopting new words) or require
+some updating (e.g. learning, researching).</p>
+
+<p>You could read the previous two paragraphs in the context of &ldquo;learning R&rdquo; (or any
+other programming language) as the objectives and the way to achieve them are similar.
+For the remainder of this post I will discuss some common features between learning R
+and a spoken language.</p>
+
+<h1 id="learning-r">Learning R</h1>
+
+<p>There are different objectives and motivating factors to learn R. You may, for example,
+want to develop &ldquo;data science&rdquo; programming skills to complement your job, make R
+programming part of your day to day work or become an advanced user. All these will
+require developing new skills and maintaining them. There is no one right path to learn
+anything so you should be open to experimenting until you find the things that work for
+you. It will be an emotional journey with highs and lows. There will be fun in mastering
+something new and frustration when you spend hours debugging your code to find that you
+forgot a comma or used the wrong case (it&rsquo;ll keep happening&hellip; sigh!).</p>
+
+<p>As a newcomer you may feel overwhelmed by all the information about the fancy things
+that R can do. Don&rsquo;t worry even long time users can have that feeling. You may ask but
+&ldquo;how do you get on top of it?&rdquo;. You don&rsquo;t and most importantly you don&rsquo;t need to. This
+is the same for any spoken language as they have many different &ldquo;styles&rdquo;, for example,
+legalese, poetic, technical, scientific, business, humorous, journalistic to name
+but a few. You don&rsquo;t need to master them all! You could specialise in technical
+writing and dab in a bit of poetry but you do not need to be a master of legalese
+until you have to sign a contract where you might be wiser to consult a lawyer.
+However each of them depends on some common &ldquo;base grammar&rdquo; that you use to have
+an understanding of the other domains. This is the &ldquo;same&rdquo; for R, there is &ldquo;Base R&rdquo;
+around which various ecosystems and packages are built (many of which overlap).</p>
+
+<p>To get started you need to build some base knowledge (i.e. a foundation). For
+both R and a spoken language this could be achieved by doing a course or reading
+a booking. This typically means investing at least a few hours a week or doing an
+intensive course over a short period of time (e.g. two weeks). Whichever route you
+take the best rewards come when you immerse yourself as much as possible and use
+making mistakes as learning opportunities. Even making the same mistakes repeatedly
+is a good way to revisit and strengthen your knowledge and facilitate your future
+development.</p>
+
+<p>For an &ldquo;easier&rdquo; learning path, develop your R knowledge and skills based on what you
+need to do and what interests you (i.e. some form of &ldquo;specialisation&rdquo;). The same applies
+to learning a new spoken language. There is nothing wrong with looking at areas that
+interest you but don&rsquo;t overwhelm yourself. It is similar to being a technical writer
+who likes to read poetry. You don&rsquo;t need to master or &ldquo;understand&rdquo; poetry to enjoy it.
+It will broaden your horizons and increases your knowledge. You don&rsquo;t have to master
+all the areas as an understanding of the concepts is often enough.</p>
+
+<p>When using a spoken language we all have our own &ldquo;style&rdquo; which can change or evolve
+over time. The biggest influence on our styles are probably the environment that you
+were exposed to in your earlier life, popular culture and &ldquo;influencers&rdquo; in your life.
+Your style will naturally change over time and perhaps change more radically due to
+some major reason or influence (e.g. after college adopting a &ldquo;professional&rdquo; style
+for a new job). Regardless of your style you usually do your best to make yourself
+understandable to others. The same logic applies to programming. Often there are
+different ways to program the same thing but you should focus on making it readable
+by others (including the future you) rather than trying to make it too &ldquo;clever&rdquo;.
+Think of it being like people who deliberately (and arguably annoyingly) use obscure
+long words. One of the most radical changes in my programming took place early
+in my career when I started to work in a regulated environment where programs had
+to be &ldquo;reproducible&rdquo; for both quality and auditing reasons. Knowing that someone
+was or could be watching made me focus harder on making sure my code was readable
+and understandable by others, essentially forcing me to &ldquo;speak&rdquo; the same language.</p>
+
+<p>One of the challenges of learning something new is feeling inadequate or inferior
+to others (i.e., the imposter syndrome<sup class="footnote-ref" id="fnref:ImposterSyndrome"><a rel="footnote" href="#fn:ImposterSyndrome">3</a></sup>). The same is true for
+spoken languages too. Embrace being an  &ldquo;imposter&rdquo; and use it to feed your hunger
+to learn more in a healthy way. Some people will walk in front of you and
+others behind but it doesn&rsquo;t matter so long as you go at your own pace whilst
+enjoying the journey and the view. It is not a competitive event. This is free
+advice from one &ldquo;imposter&rdquo; to another.</p>
+
+<h1 id="community-learning">Community Learning</h1>
+
+<p>Ever since R was released as a free software by Ross Ihaka and Robert Gentleman it has
+been a community driven project which can be seen across the various web and R user
+groups. R goes from strength to strength thanks to its community and thanks to the
+excellent R Core team<sup class="footnote-ref" id="fnref:who-give-it-a-stable-and-reliable-foundation-that-you-can-trust"><a rel="footnote" href="#fn:who-give-it-a-stable-and-reliable-foundation-that-you-can-trust">0</a></sup>. Your learning and development depends on this community so embrace it
+with open arms. For the most part R community members are polite and helpful. If
+someone is not behaving appropriately there are members who are willing to politely
+intervene<sup class="footnote-ref" id="fnref:CallOutYihui"><a rel="footnote" href="#fn:CallOutYihui">4</a></sup>. So joining in should be a relatively safe endeavour. How do
+you go about doing this?</p>
+
+<p>First and foremost try to find people around you and build a local/your community with
+them. It does not matter if they have more or less experience than you. The R is
+community driven by people with differing experiences and backgrounds who help one
+another. No single person can know everything. So drop the hierarchy and collaborate
+as a community.</p>
+
+<p>When you learn a new spoken language you will encounter new words, phrases and/or idioms.
+For these you will probably consult a dictionary, a grammar reference and/or a thesaurus
+(even if they are on-line). They will give you a different depth of understanding whilst
+enhancing your development. However, in programming terms, search engines make it easier
+to find solutions to your programming problems. One of the side effects of this approach
+is that people blindly copy and paste code without truly understanding it! To get a
+better understanding of R commands and code, use the R built-in help and (package)
+vignettes. They are your dictionary, thesaurus and grammar guides. The more you use
+them the more familiar they will become and the quicker you will become at finding
+solutions for yourself. They can also be a saviour when you don&rsquo;t have internet access.
+Having said that I encourage using on-line searches as they can teach you new things
+or reveal other approaches. Try to understand what the code is doing and why by
+simultaneously using the R built-in help and vignettes.</p>
+
+<p>There is so much R related material on-line and in print <strong>THANKS</strong> to the many
+people who make it possible. How do you keep up with it all? You can&rsquo;t and you don&rsquo;t.
+Like with spoken language if you want to follow the news you cannot follow all the
+news sources available which makes you naturally selective. With R you have to do
+the same. For example, over the year I have chopped, changed and narrowed my
+selection down to actively following R Weekly<sup class="footnote-ref" id="fnref:Rweekly"><a rel="footnote" href="#fn:Rweekly">5</a></sup> and one twitter feed. I feel
+that both of these keep me informed enough to be content. Occasionally I complement
+these with watching some conference videos or reading a book. Pretty light but very
+informative at a level that I can manage without feeling overwhelmed with the added
+bonus of suppressing any fears of missing out.</p>
+
+<p>To be immersed in learning a language will mean encountering social or professional
+situations where you are confronted with the language in a group setting. For spoken
+languages this could be at a dinner, party or coffee (tea) break and for a programming
+language at an R user group meeting, conference or on-line. Initially in both
+situations I felt like an alien and was afraid to speak. As I started to engage,
+people were kind, helpful and encouraging as many of them were also aliens or
+ex-aliens.</p>
+
+<h1 id="summary">Summary</h1>
+
+<p>Developing your R knowledge, skills and experience can take over your life if you let
+it. You could try various tricks or methods to develop more intensively but time and
+human nature are usually the limiting factors. Some intensive methods (e.g. doing a
+course, reading a book) can work for a limited duration but to be sustainable treat
+learning R like learning a new spoken language. Make it a life (career) project that you
+continuously maintain and nurture. Before you know it you will be a fluent R speaker.
+<code>q()</code></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:cran">The Comprehensive R Archive Network (CRAN): <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>
+ <a class="footnote-return" href="#fnref:cran">↩</a></li>
+<li id="fn:HelloWorld">&ldquo;Hello World!&rdquo; <a href="https://en.wikipedia.org/wiki/Hello_world">https://en.wikipedia.org/wiki/Hello_world</a>
+ <a class="footnote-return" href="#fnref:HelloWorld">↩</a></li>
+<li id="fn:ImposterSyndrome">Embrace the Imposter Syndrome! <a href="https://en.wikipedia.org/wiki/Impostor_syndrome">https://en.wikipedia.org/wiki/Impostor_syndrome</a>
+ <a class="footnote-return" href="#fnref:ImposterSyndrome">↩</a></li>
+<li id="fn:CallOutYihui">Yihui Xie helping newcomers: <a href="https://yihui.name/en/2018/05/no-slap-to-smiles/">https://yihui.name/en/2018/05/no-slap-to-smiles/</a>
+ <a class="footnote-return" href="#fnref:CallOutYihui">↩</a></li>
+<li id="fn:Rweekly">R weekly: <a href="https://rweekly.org/">https://rweekly.org/</a>
+ <a class="footnote-return" href="#fnref:Rweekly">↩</a></li>
+</ol>
+</div>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="/blog/learning-r-vs-learning-a-spoken-language/" data-id="5a597fe1c195626d6b2e6cc6346ea574" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = location.protocol + '//' + location.host + $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="/blog/creating-certificates-of-attendance-using-r/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Generating Certificates of Attendance Using R</div>
+    </a>
+    
+
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/categories/blog">
+                    blog
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/categories/events">
+                    events
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/accessibility">
+                    accessibility
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/data-science">
+                    data-science
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/events">
+                    events
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/latex">
+                    latex
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/learning">
+                    learning
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/r-language">
+                    r-language
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/r-markdown">
+                    r-markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/statistics">
+                    statistics
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/teaching">
+                    teaching
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>
