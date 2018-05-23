@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</loc>
     <lastmod>2018-02-20T00:00:00+00:00</lastmod>
   </url>
@@ -35,31 +40,31 @@
   
   <url>
     <loc>http://www.dsup.org/categories/blog/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.dsup.org/blog/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.dsup.org/categories/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.dsup.org/tags/data-science/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.dsup.org/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,7 +94,7 @@
   
   <url>
     <loc>http://www.dsup.org/tags/learning/</loc>
-    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -101,7 +106,7 @@
   
   <url>
     <loc>http://www.dsup.org/tags/r-language/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
