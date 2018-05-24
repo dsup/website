@@ -13,7 +13,7 @@ Hereafter I will refer to spoken (written) languages as "spoken languages".'
 images: [milkovi-444287-unsplash-cropped.jpg]
 ---
 
-*Saghir Bashir (ilustat.com)*
+*Saghir Bashir [(www.ilustat.com)](http://www.ilustat.com/)*
 
 
 # Introduction
