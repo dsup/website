@@ -18,8 +18,9 @@
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/</guid>
-      <description>Introduction R has grown in popularity over the years which can be measured by using different metrics, for example, R downloads, the number of packages on CRAN1, participation in on-line communities, books published and so forth. This growth brings with it newcomers who are keen to learn the R programming language.
-Learning R, like learning anything else, is a process from which you get what you put into it. In this post, I will argue that learning R should be treated like learning a spoken (written) language, i.</description>
+      <description>Saghir Bashir (ilustat.com)
+Introduction R has grown in popularity over the years which can be measured by using different metrics, for example, R downloads, the number of packages on CRAN1, participation in on-line communities, books published and so forth. This growth brings with it newcomers who are keen to learn the R programming language.
+Learning R, like learning anything else, is a process from which you get what you put into it.</description>
     </item>
     
     <item>
@@ -28,7 +29,8 @@ Learning R, like learning anything else, is a process from which you get what yo
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</guid>
-      <description>Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
+      <description>Saghir Bashir (ilustat.com)
+Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
 Objective The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</description>
     </item>
     

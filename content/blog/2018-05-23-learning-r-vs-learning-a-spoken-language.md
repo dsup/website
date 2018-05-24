@@ -13,6 +13,9 @@ Hereafter I will refer to spoken (written) languages as "spoken languages".'
 images: [milkovi-444287-unsplash-cropped.jpg]
 ---
 
+*Saghir Bashir (ilustat.com)*
+
+
 # Introduction
 
 R has grown in popularity over the years which can be measured by using different 
