@@ -14,7 +14,7 @@ images: [Example_Certificate.png]
 ```{r set-options, echo=FALSE, cache=FALSE}
 options(width = 90)
 ```
-*Saghir Bashir (ilustat.com)*
+*Saghir Bashir [(www.ilustat.com)](http://www.ilustat.com/)*
 
 
 Sometimes after an event you need to issue certificates to the participants. 

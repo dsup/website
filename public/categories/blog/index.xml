@@ -18,7 +18,7 @@
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/learning-r-vs-learning-a-spoken-language/</guid>
-      <description>Saghir Bashir (ilustat.com)
+      <description>Saghir Bashir (www.ilustat.com)
 Introduction R has grown in popularity over the years which can be measured by using different metrics, for example, R downloads, the number of packages on CRAN1, participation in on-line communities, books published and so forth. This growth brings with it newcomers who are keen to learn the R programming language.
 Learning R, like learning anything else, is a process from which you get what you put into it.</description>
     </item>
@@ -29,7 +29,7 @@ Learning R, like learning anything else, is a process from which you get what yo
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/creating-certificates-of-attendance-using-r/</guid>
-      <description>Saghir Bashir (ilustat.com)
+      <description>Saghir Bashir (www.ilustat.com)
 Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
 Objective The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</description>
     </item>
@@ -40,7 +40,7 @@ Objective The key objective was to produce PDF certificates that could be emaile
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/data-science-education-some-thoughts/</guid>
-      <description>Saghir Bashir (ilustat.com)
+      <description>Saghir Bashir (www.ilustat.com)
 Life scientists, economists, ecologists, computer scientists, social scientists, linguists, mathematicians, physcists and many others have or are choosing data science as a career. The treasure trove of backgrounds presents knowledge sharing opportunities and challenges alike. However for newcomers this career transition and continuous development can be overwhelming and leave some of them with feelings of not belonging or lacking competence, characteristics of impostor’s syndrome. Educators, mentors, trainers and managers have a crucial role to play in developing newcomers to become competent and confident data scientists.</description>
     </item>
     
