@@ -2,42 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Data Science Unplugged</title>
-    <link>http://www.dsup.org/blog/</link>
+    <link>/blog/</link>
     <description>Recent content in Blogs on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.dsup.org/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning R vs Learning a Spoken Language</title>
-      <link>http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/</link>
+      <link>/blog/learning-r-vs-learning-a-spoken-language/</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/</guid>
-      <description>Introduction R has grown in popularity over the years which can be measured by using different metrics, for example, R downloads, the number of packages on CRAN1, participation in on-line communities, books published and so forth. This growth brings with it newcomers who are keen to learn the R programming language.
-Learning R, like learning anything else, is a process from which you get what you put into it. In this post, I will argue that learning R should be treated like learning a spoken (written) language, i.</description>
+      <guid>/blog/learning-r-vs-learning-a-spoken-language/</guid>
+      <description>Saghir Bashir (ilustat.com)
+Introduction R has grown in popularity over the years which can be measured by using different metrics, for example, R downloads, the number of packages on CRAN1, participation in on-line communities, books published and so forth. This growth brings with it newcomers who are keen to learn the R programming language.
+Learning R, like learning anything else, is a process from which you get what you put into it.</description>
     </item>
     
     <item>
       <title>Generating Certificates of Attendance Using R</title>
-      <link>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</link>
+      <link>/blog/creating-certificates-of-attendance-using-r/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</guid>
-      <description>Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
+      <guid>/blog/creating-certificates-of-attendance-using-r/</guid>
+      <description>Saghir Bashir (ilustat.com)
+Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
 Objective The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</description>
     </item>
     
     <item>
       <title>Data Science Education: Some Thoughts</title>
-      <link>http://www.dsup.org/blog/data-science-education-some-thoughts/</link>
+      <link>/blog/data-science-education-some-thoughts/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.dsup.org/blog/data-science-education-some-thoughts/</guid>
+      <guid>/blog/data-science-education-some-thoughts/</guid>
       <description>Saghir Bashir (ilustat.com)
 Life scientists, economists, ecologists, computer scientists, social scientists, linguists, mathematicians, physcists and many others have or are choosing data science as a career. The treasure trove of backgrounds presents knowledge sharing opportunities and challenges alike. However for newcomers this career transition and continuous development can be overwhelming and leave some of them with feelings of not belonging or lacking competence, characteristics of impostor’s syndrome. Educators, mentors, trainers and managers have a crucial role to play in developing newcomers to become competent and confident data scientists.</description>
     </item>

@@ -14,6 +14,8 @@ images: [Example_Certificate.png]
 ```{r set-options, echo=FALSE, cache=FALSE}
 options(width = 90)
 ```
+*Saghir Bashir (ilustat.com)*
+
 
 Sometimes after an event you need to issue certificates to the participants. 
 How do you normally produce several certificates automatically? There are 
