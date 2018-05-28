@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Data Science Master Chef &middot; Data Science Unplugged</title>
+    <meta name="generator" content="Hugo 0.30.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Data Science Unplugged">
+    
+      <meta name="description" content="A data scientist like a master chef should fully understand the ingredients (data) of their craft before any processing which includes going back to the source and origins of the data.">
+    
+    
+    <link rel="canonical" href="/blog/data-science-master-chef/"/>
+    <link rel="icon" href="/logo.png">
+    <link rel="logo" href="/logo.png"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/monokai.css">
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Data Science Master Chef" />
+<meta property="og:description" content="A data scientist like a master chef should fully understand the ingredients (data) of their craft before any processing which includes going back to the source and origins of the data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/data-science-master-chef/" />
+
+  <meta property="og:image" content="/chefs-1661131_960_720.jpg" />
+
+
+
+<meta property="article:published_time" content="2018-05-29T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-05-29T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Data Science Master Chef">
+<meta itemprop="description" content="A data scientist like a master chef should fully understand the ingredients (data) of their craft before any processing which includes going back to the source and origins of the data.">
+
+
+<meta itemprop="datePublished" content="2018-05-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="809">
+
+  <meta itemprop="image" content="/chefs-1661131_960_720.jpg">
+
+
+
+<meta itemprop="keywords" content="Data Science,Statistics,Critical Thinking,Food," />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image:src" content="/chefs-1661131_960_720.jpg"/>
+<meta name="twitter:title" content="Data Science Master Chef"/>
+<meta name="twitter:description" content="A data scientist like a master chef should fully understand the ingredients (data) of their craft before any processing which includes going back to the source and origins of the data."/>
+<meta name="twitter:site" content="@dsup_lx"/>
+
+    <script src="https://use.fontawesome.com/304670a398.js"></script>
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo">
+          
+          <span class="site-title">Data Science Unplugged</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">About</a>
+          
+          <a class="main-nav-link" href="/2018/02/14/resources/">Resources</a>
+          
+
+          
+          
+          <a class="main-nav-link" href="/events/">Events</a>
+          
+          
+          
+          <a class="main-nav-link" href="/blog/">Blog</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/css/images/logo.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">About</a></td>
+          
+          <td><a class="main-nav-link" href="/2018/02/14/resources/">Resources</a></td>
+          
+
+          
+          
+          <td><a class="main-nav-link" href="/events/">Events</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="/blog/">Blog</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="/css/images/logo.png">
+      
+      <h2 id="name">Data Science Unplugged</h2>
+      <h3 id="title">A community for data science</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Lisbon</span>
+      
+          <a id="follow" href="https://twitter.com/dsup_lx">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        1
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          11
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/dsup" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+<td><a href="//meetup.com/Data-Science-Unplugged" target="_blank" title="Meetup"><i class="fa fa-meetup"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//youtu.be/AuAzc7doWhk" target="_blank" title="YouTube"><i class="fa fa-youtube"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/dsup_lx" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <img src="/banners/chefs-1661131_960_720.jpg" class="article-banner">
+        
+
+        <header class="article-header">
+    <a href="/blog/data-science-master-chef/">
+    <h1 class="article-title" itemprop="name">
+        Data Science Master Chef
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-05-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-05-29</time>
+            &middot;
+            809
+            words
+            &middot;
+            4
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="/categories/blog">Blog</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="/tags/data-science">Data Science</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/statistics">Statistics</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/critical-thinking">Critical Thinking</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="/tags/food">Food</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<p><em>Saghir Bashir <a href="http://www.ilustat.com/">(www.ilustat.com)</a></em></p>
+
+<h1 id="a-master-chef">A Master Chef</h1>
+
+<p>A master chef can transform any set of ingredients into an eye pleasing and appetising festival for your taste buds. Before embarking on their creation, they will begin by understanding the quality and freshness of all the ingredients which will determine the quantities in which they will be fused. Understanding the source and origins will be equally important to them (e.g. type of olives, location grown and extraction method for olive oil). Their full grasp of the processes (e.g. mixing, baking, steaming) will lead to a beautifully presented and mouthwatering delight for you to savour. Subtle or even major variations in the processes will result in differing masterpieces for you to feast on. It is possible that even with this greatness that some (or all) of them are not to your liking.</p>
+
+<p>If the quality of the ingredients are lower than desired, a master chef with knowledge, experience and understanding, will still serve up an appetising delight (perhaps with less profound flavours). In the event that some of the ingredients are missing the situation could still be salvaged by using suitable substitutes (or even doing without). However if a key ingredient is missing (e.g. eggs for an omelette) or if the overall quality is terrible then even a master chef cannot rescue the situation.</p>
+
+<p>The brands of the equipment/tools (e.g. sauce pans, ovens) do not determine the success of the end product. Provided that they are of good quality then they should be enough. The real art is in knowing how, when and why to use them.</p>
+
+<h1 id="a-data-science-master-chef">A Data Science Master Chef</h1>
+
+<p>A data science master chef can transform a set of data into a festival of numbers for your eyes to savour and your mind to indulge. Before embarking on any analysis, they will begin by understanding the quality, appropriateness and validity of the data. Understanding the source and origins (e.g. dates, data collection methods, bias reduction measures) will be equally important to them. Their full grasp of the processes (e.g. summarising, modelling or visualising) will, through their mastery, reveal relevant and insightful patterns in the data. Subtle or even major variations in the processes will result in alternate savvy insights for you to ponder and to act on. It is possible that even with this greatness that some (or all) of them are not in agreement with your point of view.</p>
+
+<p>If the quality of the data is lower than desired then the data science master chef can still construct practical and pragmatic insights (most likely with more uncertainty). If some of the data are missing the situation could still be rescued with suitable substitutes (e.g. surrogate variables, missing data methods) or even doing without. If key data is (mostly) missing (e.g. date of event for time to event data) then it is a lost cause. Further if the overall quality is terrible then even a data science master chef cannot rescue the situation.</p>
+
+<p>The brands of the equipment/tools (e.g. data processing and analysis software, IDE) do not determine the success of the end product. Provided that they are of good quality then they should be enough. The real art is in knowing how, when and why to use them.</p>
+
+<h1 id="a-fast-food-data-scientist">A Fast Food Data Scientist</h1>
+
+<p>The appeal of fast food is convenience and &ldquo;taste&rdquo; often created by using lower quality ingredients with some (primarily fat, salt and sugar) in unhealthy doses. The processing is often rudimentary in the form of frying or microwaving. The (very) occasional consumption of fast food may be an acceptable experience but as a day-to-day dietary regime it will lead to undesirable longer term health effects. The same ingredients with the proper understanding and processing could lead to a gratifying experience. If the ingredients are of lower quality then this will be reflected in the flavour.</p>
+
+<p>A fast food data scientist will take some data and pipe it through a &ldquo;sexy&rdquo; model or algorithm. Occasionally the results could be alluring and useful by chance. However, such &ldquo;frying&rdquo; or &ldquo;microwaving&rdquo; of the data will only lead to undesirable consequences in the longer term. The same data with the proper understanding and processing could lead to useful and usable results. If the data are of lower quality then this should be reflected in the statistical variation (uncertainty).</p>
+
+<h1 id="summary">Summary</h1>
+
+<p>A data scientist like a master chef should fully understand the ingredients (data) of their craft before any processing which includes going back to the source and origins of the data. This foundation will assist in wisely choosing the best methods and processes to reveal relevant and insightful patterns in the data. Although not every one will agree with or like the patterns that are presented they will appreciate the trustworthiness of the results and reasoning. They will also know that is far better for them than fast food data science.</p>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="/blog/data-science-master-chef/" data-id="ed149688788c21a9e4a7dd82457ee673" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = location.protocol + '//' + location.host + $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="/blog/learning-r-vs-learning-a-spoken-language/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Learning R vs Learning a Spoken Language</div>
+    </a>
+    
+
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/categories/blog">
+                    blog
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/categories/events">
+                    events
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/accessibility">
+                    accessibility
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/critical-thinking">
+                    critical-thinking
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/data-science">
+                    data-science
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/events">
+                    events
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/food">
+                    food
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/latex">
+                    latex
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/learning">
+                    learning
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/r-language">
+                    r-language
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/r-markdown">
+                    r-markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/statistics">
+                    statistics
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/teaching">
+                    teaching
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>
