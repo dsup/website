@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>Generating Certificates of Attendance Using R &middot; Data Science Unplugged</title>
-    <meta name="generator" content="Hugo 0.30.2" />
+    <meta name="generator" content="Hugo 0.32.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Data Science Unplugged">
@@ -51,7 +51,7 @@
 
 <meta itemprop="datePublished" content="2018-02-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-02-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="620">
+<meta itemprop="wordCount" content="610">
 
   <meta itemprop="image" content="http://www.dsup.org/Example_Certificate.png">
 
@@ -184,7 +184,7 @@
       </div>
       <div class="article-info-block">
         
-          9
+          12
         
         <span>
             Tags
@@ -284,7 +284,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-02-20</time>
             &middot;
-            620
+            610
             words
             &middot;
             3
@@ -371,9 +371,8 @@ set_here() # Need this later especially when rendering R markdown</code></pre>
 <pre class="r"><code>attendees &lt;- read_csv(here(&quot;AttendeeList.csv&quot;)) %&gt;%
   mutate(filePDF = str_c(&quot;PDF/&quot;, row_number(), &quot;_&quot;,
                          str_replace_all(Name, fixed(&quot; &quot;), &quot;_&quot;), &quot;.pdf&quot;)) %&gt;%
-  select(filePDF, Name, Event, Date, Location)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
-<pre class="r"><code>attendees</code></pre>
+  select(filePDF, Name, Event, Date, Location)
+attendees</code></pre>
 <pre><code>## # A tibble: 3 x 5
 ##   filePDF                 Name          Event            Date              Location      
 ##   &lt;chr&gt;                   &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;             &lt;chr&gt;         
@@ -598,7 +597,7 @@ header-includes:
                 <a class="category-list-link" href="/categories/blog">
                     blog
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">
@@ -636,10 +635,18 @@ header-includes:
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="/tags/critical-thinking">
+                    critical-thinking
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="/tags/data-science">
                     data-science
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">
@@ -648,6 +655,22 @@ header-includes:
                     events
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/food">
+                    food
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="/tags/imposter-syndrome">
+                    imposter-syndrome
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -663,7 +686,7 @@ header-includes:
                 <a class="category-list-link" href="/tags/learning">
                     learning
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">4</span>
             </li>
             
             <li class="category-list-item">
@@ -687,7 +710,7 @@ header-includes:
                 <a class="category-list-link" href="/tags/statistics">
                     statistics
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">

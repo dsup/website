@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Data Science Unplugged</title>
-    <link>http://www.dsup.org/blog/</link>
-    <description>Recent content in Blogs on Data Science Unplugged</description>
+    <title>Imposter Syndrome on Data Science Unplugged</title>
+    <link>http://www.dsup.org/tags/imposter-syndrome/</link>
+    <description>Recent content in Imposter Syndrome on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Tue, 05 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.dsup.org/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dsup.org/tags/imposter-syndrome/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -74,48 +74,6 @@ It was a passive remark without any sense of defeatism or failure. It was matter
 of fact. We are all imposters. Let&amp;rsquo;s enjoy it!&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Data Science Master Chef</title>
-      <link>http://www.dsup.org/blog/data-science-master-chef/</link>
-      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.dsup.org/blog/data-science-master-chef/</guid>
-      <description>Saghir Bashir (www.ilustat.com)
-A Master Chef A master chef can transform any set of ingredients into an eye pleasing and appetising festival for your taste buds. Before embarking on their creation, they will begin by understanding the quality and freshness of all the ingredients which will determine the quantities in which they will be fused. Understanding the source and origins will be equally important to them (e.g. type of olives, location grown and extraction method for olive oil).</description>
-    </item>
-    
-    <item>
-      <title>Learning R vs Learning a Spoken Language</title>
-      <link>http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.dsup.org/blog/learning-r-vs-learning-a-spoken-language/</guid>
-      <description>Saghir Bashir (www.ilustat.com)
-Introduction R has grown in popularity over the years which can be measured by using different metrics, for example, R downloads, the number of packages on CRAN1, participation in on-line communities, books published and so forth. This growth brings with it newcomers who are keen to learn the R programming language.
-Learning R, like learning anything else, is a process from which you get what you put into it.</description>
-    </item>
-    
-    <item>
-      <title>Generating Certificates of Attendance Using R</title>
-      <link>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.dsup.org/blog/creating-certificates-of-attendance-using-r/</guid>
-      <description>Saghir Bashir (www.ilustat.com)
-Sometimes after an event you need to issue certificates to the participants. How do you normally produce several certificates automatically? There are different ways to do it and here we share our approach after a recent community event1. We used R to automatically generate the certificates using R markdown and LaTeX language.
-Objective The key objective was to produce PDF certificates that could be emailed to attendees (see above for an example).</description>
-    </item>
-    
-    <item>
-      <title>Data Science Education: Some Thoughts</title>
-      <link>http://www.dsup.org/blog/data-science-education-some-thoughts/</link>
-      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.dsup.org/blog/data-science-education-some-thoughts/</guid>
-      <description>Saghir Bashir (www.ilustat.com)
-Life scientists, economists, ecologists, computer scientists, social scientists, linguists, mathematicians, physcists and many others have or are choosing data science as a career. The treasure trove of backgrounds presents knowledge sharing opportunities and challenges alike. However for newcomers this career transition and continuous development can be overwhelming and leave some of them with feelings of not belonging or lacking competence, characteristics of impostor’s syndrome. Educators, mentors, trainers and managers have a crucial role to play in developing newcomers to become competent and confident data scientists.</description>
     </item>
     
   </channel>

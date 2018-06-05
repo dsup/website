@@ -46,9 +46,8 @@ set_here() # Need this later especially when rendering R markdown</code></pre>
 <pre class="r"><code>attendees &lt;- read_csv(here(&quot;AttendeeList.csv&quot;)) %&gt;%
   mutate(filePDF = str_c(&quot;PDF/&quot;, row_number(), &quot;_&quot;,
                          str_replace_all(Name, fixed(&quot; &quot;), &quot;_&quot;), &quot;.pdf&quot;)) %&gt;%
-  select(filePDF, Name, Event, Date, Location)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
-<pre class="r"><code>attendees</code></pre>
+  select(filePDF, Name, Event, Date, Location)
+attendees</code></pre>
 <pre><code>## # A tibble: 3 x 5
 ##   filePDF                 Name          Event            Date              Location      
 ##   &lt;chr&gt;                   &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;             &lt;chr&gt;         

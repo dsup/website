@@ -7,10 +7,84 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.dsup.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>We Are All Imposters</title>
+      <link>http://www.dsup.org/blog/we-are-all-imposters/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.dsup.org/blog/we-are-all-imposters/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Saghir Bashir &lt;a href=&#34;http://www.ilustat.com/&#34;&gt;(www.ilustat.com)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I often have flashbacks to a conversation, as a graduate student, with an
+internationally renowned award winning statistician. We had been discussing some
+issue for which I was seeking advice. It was a fruitful conversation but then they
+finished with something along the lines of &amp;ldquo;Saghir, I realise that I don&amp;rsquo;t know
+anything about statistics.&amp;rdquo; I was stunned. It hit me so hard that I couldn&amp;rsquo;t stop
+thinking about it for weeks, in fact for years. For months I had been struggling
+with a ground breaking publication by the said statistician for which they had
+been widely recognised. I asked myself if somebody like that doesn&amp;rsquo;t know
+anything what chance do I have. It was one of my first experiences of the
+&amp;ldquo;imposter syndrome&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;More than ten years later I found myself analysing some data with various
+challenges. The more I looked the more I saw and everything was going in different
+directions. I was struggling to get to grips with the magnitude and complexity
+of it all. At some point I stopped and felt that I didn&amp;rsquo;t know anything.
+Immediately my mind flashed back to the conversation and I smiled as I finally
+understood it. From that moment onwards something changed. I was free and relieved.
+I was no longer trying to swim in an ocean that continuously pushed me under with
+its waves.&lt;/p&gt;
+
+&lt;p&gt;Now I happily embrace my imposter experiences with a passion for different
+reasons.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First and foremost is that the other extreme would be one of arrogance where I
+would foolishly believe I knew it all. Bad!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It helps me identify gaps in my knowledge, experience and skills which feeds
+my desire to continue learning and developing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It gives me the adrenaline to do my best much like the nervousness before a presentation.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I am forced to focus on what I really need to know given my constraints.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I have the power and confidence to consult others without fear and regardless of their
+rank or position.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It helps in connecting the dots betweens areas that I feel I know and those that I don&amp;rsquo;t know.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It is a reminder of all of my achievements and milestones, however small they may seem,
+that allow me to feel like an imposter.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It empowers me to answer questions with &amp;ldquo;I don&amp;rsquo;t know&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It lets me switch off from my work when I am living my life.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It keeps me human.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The renowned statistician had in some sense revealed that they were an &amp;ldquo;imposter&amp;rdquo;.
+It was a passive remark without any sense of defeatism or failure. It was matter
+of fact. We are all imposters. Let&amp;rsquo;s enjoy it!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Data Science Master Chef</title>
+      <link>http://www.dsup.org/blog/data-science-master-chef/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.dsup.org/blog/data-science-master-chef/</guid>
+      <description>Saghir Bashir (www.ilustat.com)
+A Master Chef A master chef can transform any set of ingredients into an eye pleasing and appetising festival for your taste buds. Before embarking on their creation, they will begin by understanding the quality and freshness of all the ingredients which will determine the quantities in which they will be fused. Understanding the source and origins will be equally important to them (e.g. type of olives, location grown and extraction method for olive oil).</description>
+    </item>
     
     <item>
       <title>Learning R vs Learning a Spoken Language</title>
