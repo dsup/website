@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Food on Data Science Unplugged</title>
-    <link>/tags/food/</link>
+    <link>http://www.dsup.org/tags/food/</link>
     <description>Recent content in Food on Data Science Unplugged</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/food/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dsup.org/tags/food/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Science Master Chef</title>
-      <link>/blog/data-science-master-chef/</link>
+      <link>http://www.dsup.org/blog/data-science-master-chef/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/blog/data-science-master-chef/</guid>
+      <guid>http://www.dsup.org/blog/data-science-master-chef/</guid>
       <description>Saghir Bashir (www.ilustat.com)
 A Master Chef A master chef can transform any set of ingredients into an eye pleasing and appetising festival for your taste buds. Before embarking on their creation, they will begin by understanding the quality and freshness of all the ingredients which will determine the quantities in which they will be fused. Understanding the source and origins will be equally important to them (e.g. type of olives, location grown and extraction method for olive oil).</description>
     </item>
